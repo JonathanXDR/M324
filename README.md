@@ -1,10 +1,10 @@
 # M324
 DevOps-Prozesse mit Tools unterstützen
 
-**Theorieinhalte**
+## Theorieinhalte
 ...
 
-**Themenblöcke**
+## Themenblöcke
 
 [Branching Strategie](...)
 
