@@ -7,7 +7,9 @@ DevOps-Prozesse mit Tools unterstützen
 ## Themenblöcke
 
 [Branching Strategie / Semantic Versioning](Dokumentation/D2_Branching_Strategie_Semantic_Versioning)
+
 [Meetings / Arbeitsprozesse](Dokumentation/D3_Meetings_Arbeitsprozesse)
+
 [Applikation / Technologie](Dokumentation/Applikation_Technologie)
 
 ## Andere Links
