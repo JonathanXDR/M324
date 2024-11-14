@@ -1,5 +1,13 @@
 # M324
 DevOps-Prozesse mit Tools unterstützen
+
+**Theorieinhalte**
+...
+
+**Themenblöcke**
+
+[Branching Strategie](...)
+
 ## Andere Links
 [Zeitlogging](https://tbzedu.sharepoint.com/:x:/r/sites/IT_AP21d_M324-Gruppe2/Freigegebene%20Dokumente/Gruppe2/timelogging.xlsx?d=wa8287b6140164d7981359b97c8ffaf1e&csf=1&web=1&e=LmHBhs)
 
