@@ -18,3 +18,5 @@ DevOps-Prozesse mit Tools unterstützen
 [Lernjournal Pascal](https://github.com/Pascal1414/M324-Portfolio)
 
 [Lernjournal Jon](https://github.com/jonlanda/M324-Lernjournal)
+
+[Lernjournal Jonathan](https://github.com/JonathanXDR/M324-Lernjournal)
