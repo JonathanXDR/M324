@@ -1,8 +1,6 @@
 1. **Was sind „The Three Ways“ im Kontext von DevOps?**  
    Beschreiben Sie die grundlegenden Prinzipien der „Three Ways“ und wie sie sich auf die Arbeitsweise eines Unternehmens auswirken können.
 
-1. Was sind „The Three Ways“ im Kontext von DevOps?
-
 „The Three Ways“ sind grundlegende Prinzipien, die die DevOps-Philosophie leiten und auf die Verbesserung von Workflows, Feedback und Kultur abzielen.
 
 - Der erste Weg: Systems Thinking betont den Fokus auf das Gesamtsystem, nicht nur auf einzelne Teams oder Funktionen. Es geht darum, Silos zu durchbrechen, Engpässe zu vermeiden und eine durchgängige Optimierung zu fördern.
