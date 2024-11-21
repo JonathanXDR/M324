@@ -1,15 +1,18 @@
 1. **Was sind „The Three Ways“ im Kontext von DevOps?**  
    Beschreiben Sie die grundlegenden Prinzipien der „Three Ways“ und wie sie sich auf die Arbeitsweise eines Unternehmens auswirken können.
 
-„The Three Ways“ sind grundlegende Prinzipien, die die DevOps-Philosophie leiten und auf die Verbesserung von Workflows, Feedback und Kultur abzielen.
+   „The Three Ways“ sind grundlegende Prinzipien, die die DevOps-Philosophie leiten und auf die Verbesserung von Workflows, Feedback und Kultur abzielen.
 
-- Der erste Weg: Systems Thinking betont den Fokus auf das Gesamtsystem, nicht nur auf einzelne Teams oder Funktionen. Es geht darum, Silos zu durchbrechen, Engpässe zu vermeiden und eine durchgängige Optimierung zu fördern.
+   - Der erste Weg: Systems Thinking betont den Fokus auf das Gesamtsystem, nicht nur auf einzelne Teams oder Funktionen. Es geht darum, Silos zu durchbrechen, Engpässe zu vermeiden und eine durchgängige Optimierung zu fördern.
 
-- Der zweite Weg: Amplify Feedback Loops legt Wert auf schnelle und effektive Rückmeldungen in allen Phasen des Entwicklungs- und Betriebsprozesses. Dadurch können Probleme frühzeitig erkannt und behoben werden.
+   - Der zweite Weg: Amplify Feedback Loops legt Wert auf schnelle und effektive Rückmeldungen in allen Phasen des Entwicklungs- und Betriebsprozesses. Dadurch können Probleme frühzeitig erkannt und behoben werden.
 
-- Der dritte Weg: Continual Learning and Experimentation zielt darauf ab, eine Kultur des kontinuierlichen Lernens, der Innovation und des Experimentierens zu fördern. Dies hilft Unternehmen, sich an Veränderungen anzupassen und ihre Prozesse kontinuierlich zu verbessern.
+   - Der dritte Weg: Continual Learning and Experimentation zielt darauf ab, eine Kultur des kontinuierlichen Lernens, der Innovation und des Experimentierens zu fördern. Dies hilft Unternehmen, sich an Veränderungen anzupassen und ihre Prozesse kontinuierlich zu verbessern.
 
-Die Anwendung dieser Prinzipien kann die Effizienz steigern, die Qualität verbessern und die Anpassungsfähigkeit eines Unternehmens fördern.
+   Die Anwendung dieser Prinzipien kann die Effizienz steigern, die Qualität verbessern und die Anpassungsfähigkeit eines Unternehmens fördern.
+
+2. **Was beschreibt der „First Way: Systems Thinking“?**
+   Erläutern Sie, wie das „Systems Thinking“ die Sichtweise auf den gesamten Workflow und die Zusammenarbeit zwischen den Teams verändern kann.
 
 3. **Was beschreibt der „First Way: Systems Thinking“?**  
    Erläutern Sie, wie das „Systems Thinking“ die Sichtweise auf den gesamten Workflow und die Zusammenarbeit zwischen den Teams verändern kann.
