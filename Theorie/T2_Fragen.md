@@ -3,7 +3,7 @@
 
    „The Three Ways“ sind grundlegende Prinzipien, die die DevOps-Philosophie leiten und auf die Verbesserung von Workflows, Feedback und Kultur abzielen.
 
-   - Der erste Weg: Systems Thinking betont den Fokus auf das Gesamtsystem, nicht nur auf einzelne Teams oder Funktionen. Es geht darum, Silos zu durchbrechen, Engpässe zu vermeiden und eine durchgängige Optimierung zu fördern.
+   - Der erste Weg: Systems Thinking betont den Fokus auf den Arbeitsprozess, nicht nur auf einzelne Teams oder Funktionen. Es geht darum, Silos zu durchbrechen, Engpässe zu vermeiden und eine durchgängige Optimierung zu fördern.
 
    - Der zweite Weg: Amplify Feedback Loops legt Wert auf schnelle und effektive Rückmeldungen in allen Phasen des Entwicklungs- und Betriebsprozesses. Dadurch können Probleme frühzeitig erkannt und behoben werden.
 
