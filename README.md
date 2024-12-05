@@ -4,7 +4,10 @@ DevOps-Prozesse mit Tools unterstützen
 
 ## Theorieinhalte
 
-...
+[T1](/Theorie/T1.md)
+[T2](/Theorie/T2.md)
+[T3](/Theorie/T3.md)
+[T4](/Theorie/T4.md)
 
 ## Themenblöcke
 
