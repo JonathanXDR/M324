@@ -20,26 +20,26 @@ Unsere Branching Strategie soll sicherstellen, dass wir strukturiert entwickeln,
    - Neue Features und Bugfixes werden nach Code-Review von den jeweiligen Feature- oder Bugfix-Branches in `develop` gemerged.
    - Stellt den aktuellen Integrationsstand dar, ist aber nicht unbedingt stabil genug, um in Produktion zu gehen.
 
-3. **feature/* (Feature Branches)**:  
+3. **feature/\* (Feature Branches)**:  
    - Werden von `develop` abgezweigt, um ein bestimmtes Feature umzusetzen.
-   - Namenskonvention: `feature/<kurze-beschreibung>` z. B. `feature/user-auth`.
+   - Namenskonvention: `feature/<ID und Titel der User-Story>` z. B. `feature/12-user-auth`.
    - Sobald ein Feature fertig ist, wird eine Pull Request (PR) für den Merge in `develop` eröffnet.  
    - Es darf nur nach Code-Review und ggf. bestandenem CI-Test gemerged werden.
 
-4. **bugfix/* (Bugfix Branches)**:  
+4. **bugfix/\* (Bugfix Branches)**:  
    - Werden von `develop` abgezweigt, um Fehler zu beheben, die vor dem Release entdeckt werden.
-   - Namenskonvention: `bugfix/<kurze-beschreibung>` z. B. `bugfix/login-timeout`.
+   - Namenskonvention: `bugfix/<ID und Titel der User-Story>` z. B. `bugfix/36-login-timeout`.
    - Es darf nur nach Code-Review und ggf. bestandenem CI-Test gemerged werden.
 
-5. **release/* (Release Branches)**:  
+5. **release/\* (Release Branches)**:  
    - Werden von `develop` erstellt, sobald ein bestimmter Funktionsumfang fertiggestellt ist und ein Release vorbereitet werden soll.
    - Namenskonvention: `release/x.y.z` entsprechend dem geplanten Release-Tag (Semantic Versioning)
    - Hier erfolgen letzte Tests, Dokumentation und Feineinstellungen.
    - Ist der Release stabil, wird er in `main` gemerged und mit einem Tag versehen. Ausserdem wird der Release-Branch in `develop` zurückgemerged, um sicherzustellen, dass `develop` auf dem neuesten Stand bleibt.
 
-6. **hotfix/* (Hotfix Branches)**:  
+6. **hotfix/\* (Hotfix Branches)**:  
    - Werden von `main` abgezweigt, wenn in der Produktivumgebung dringende Fehler aufgetreten sind, die sofort behoben werden müssen.
-   - Namenskonvention: `hotfix/<kurze-beschreibung>` z. B. `hotfix/password-hash`.
+   - Namenskonvention: `hotfix/<ID und Titel der User-Story>` z. B. `hotfix/24-password-hash`.
    - Nach Korrektur des Fehlers wird in `main` gemerged und getaggt, sowie ein Rückmerge in `develop` durchgeführt.
 
 ### Erlaubte Merge-Wege
@@ -57,10 +57,10 @@ Unsere Branching Strategie soll sicherstellen, dass wir strukturiert entwickeln,
 
 - main (statisch)
 - develop (statisch)
-- feature/<kurze-beschreibung>  
-- bugfix/<kurze-beschreibung>  
+- feature/<ID und Titel der User-Story>  
+- bugfix/<ID und Titel der User-Story>  
 - release/<semver> (z. B. release/1.2.0)  
-- hotfix/<kurze-beschreibung>
+- hotfix/<ID und Titel der User-Story>
 
 ## Semantic Versioning
 
@@ -84,7 +84,7 @@ Wir verwenden [Semantic Versioning (SemVer)](https://semver.org/) in der Form `M
 
 4. **Hotfixes**:  
    Ein Hotfix an einer produktiven Version erhöht in der Regel nur die PATCH-Version.  
-   Beispiel: Aktuell produktive Version ist `1.2.0`. Ein kritischer Fehler wird per `hotfix/server-crash` behoben und nach `main` gemerged, anschliessend wird auf `1.2.1` getaggt.
+   Beispiel: Aktuell produktive Version ist `1.2.0`. Ein kritischer Fehler wird per `hotfix/48-server-crash` behoben und nach `main` gemerged, anschliessend wird auf `1.2.1` getaggt.
 
 ## Quellen
 
