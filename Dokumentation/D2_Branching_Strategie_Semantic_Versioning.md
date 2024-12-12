@@ -10,34 +10,39 @@ Unsere Branching Strategie soll sicherstellen, dass wir strukturiert entwickeln,
 
 **Branch-Typen:**
 
-1. **main (Production Branch)**:  
+1. **main (Production Branch)**:
+
    - Enthält jederzeit den stabilen, auslieferbaren Code (Produktionsstand).
    - Neue Versions-Releases werden von hier aus getaggt.
    - Merges auf `main` geschehen nur von `release` oder in Notfällen von `hotfix` Branches.
 
-2. **develop (Integration Branch)**:  
+2. **develop (Integration Branch)**:
+
    - Hier wird laufend in Richtung nächstes Release entwickelt.
    - Neue Features und Bugfixes werden nach Code-Review von den jeweiligen Feature- oder Bugfix-Branches in `develop` gemerged.
    - Stellt den aktuellen Integrationsstand dar, ist aber nicht unbedingt stabil genug, um in Produktion zu gehen.
 
-3. **feature/\* (Feature Branches)**:  
+3. **feature/\* (Feature Branches)**:
+
    - Werden von `develop` abgezweigt, um ein bestimmtes Feature umzusetzen.
    - Namenskonvention: `feature/<ID und Titel der User-Story>` z. B. `feature/12-user-auth`.
-   - Sobald ein Feature fertig ist, wird eine Pull Request (PR) für den Merge in `develop` eröffnet.  
+   - Sobald ein Feature fertig ist, wird eine Pull Request (PR) für den Merge in `develop` eröffnet.
    - Es darf nur nach Code-Review und ggf. bestandenem CI-Test gemerged werden.
 
-4. **bugfix/\* (Bugfix Branches)**:  
+4. **bugfix/\* (Bugfix Branches)**:
+
    - Werden von `develop` abgezweigt, um Fehler zu beheben, die vor dem Release entdeckt werden.
    - Namenskonvention: `bugfix/<ID und Titel der User-Story>` z. B. `bugfix/36-login-timeout`.
    - Es darf nur nach Code-Review und ggf. bestandenem CI-Test gemerged werden.
 
-5. **release/\* (Release Branches)**:  
+5. **release/\* (Release Branches)**:
+
    - Werden von `develop` erstellt, sobald ein bestimmter Funktionsumfang fertiggestellt ist und ein Release vorbereitet werden soll.
    - Namenskonvention: `release/x.y.z` entsprechend dem geplanten Release-Tag (Semantic Versioning)
    - Hier erfolgen letzte Tests, Dokumentation und Feineinstellungen.
    - Ist der Release stabil, wird er in `main` gemerged und mit einem Tag versehen. Ausserdem wird der Release-Branch in `develop` zurückgemerged, um sicherzustellen, dass `develop` auf dem neuesten Stand bleibt.
 
-6. **hotfix/\* (Hotfix Branches)**:  
+6. **hotfix/\* (Hotfix Branches)**:
    - Werden von `main` abgezweigt, wenn in der Produktivumgebung dringende Fehler aufgetreten sind, die sofort behoben werden müssen.
    - Namenskonvention: `hotfix/<ID und Titel der User-Story>` z. B. `hotfix/24-password-hash`.
    - Nach Korrektur des Fehlers wird in `main` gemerged und getaggt, sowie ein Rückmerge in `develop` durchgeführt.
@@ -57,9 +62,9 @@ Unsere Branching Strategie soll sicherstellen, dass wir strukturiert entwickeln,
 
 - main (statisch)
 - develop (statisch)
-- feature/<ID und Titel der User-Story>  
-- bugfix/<ID und Titel der User-Story>  
-- release/<semver> (z. B. release/1.2.0)  
+- feature/<ID und Titel der User-Story>
+- bugfix/<ID und Titel der User-Story>
+- release/<semver> (z. B. release/1.2.0)
 - hotfix/<ID und Titel der User-Story>
 
 ## Semantic Versioning
