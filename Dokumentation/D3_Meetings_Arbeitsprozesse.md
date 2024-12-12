@@ -7,3 +7,14 @@
 Es wurde definiert, dass wir am Schluss jedes Sprints (jede Woche) ein Meeting abhalten, in dem wir den Tag reflektieren und Verbesserungsvorschläge für die nächste Woche machen. Die Retrospective wird jeweils am Donnerstag um ca. 16:15 - 16:30 stattfinden.
 
 ### Protokolle
+
+#### 21.11.2024
+
+- Userstory für alle Tätigkeiten (Aufgaben) erfassen
+- Subtask für alle US erfassen und entsprechend zuordnen
+- Planning/Meeting strukturieren/ definieren
+- KVP am Ende des Unterrichtstag planen
+
+#### 02.12.2024
+
+#### 12.12.2024
