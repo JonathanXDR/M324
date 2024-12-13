@@ -60,12 +60,12 @@ Unsere Branching Strategie soll sicherstellen, dass wir strukturiert entwickeln,
 
 ### Branch Naming Conventions
 
-- main (statisch)
-- develop (statisch)
-- feature/<ID und Titel der User-Story>
-- bugfix/<ID und Titel der User-Story>
-- release/<semver> (z. B. release/1.2.0)
-- hotfix/<ID und Titel der User-Story>
+- `main` (statisch)
+- `develop` (statisch)
+- `feature/<ID und Titel der User-Story>`
+- `bugfix/<ID und Titel der User-Story>`
+- `release/<Semantic Versioning>`
+- `hotfix/<ID und Titel der User-Story>`
 
 ## Semantic Versioning
 
