@@ -57,7 +57,7 @@ Es wurde definiert, dass am Schluss jedes Sprints (jede Woche) ein Meeting abgeh
 - Conventional commits definineren
 - T5 fertig machen
 - D2 anpassen
-- Lernjournal vorzu erfassen und pushen (Nicht am Schluss)
+- D5: Lernjournal vorzu erfassen und pushen (Nicht am Schluss)
 - Alle Userstories erstellen
 - Anpassung der Userstory IDs auf `<User Story oder Task>: Titel` Beispielsweise: `User Story: Band erfassen`
 
@@ -65,7 +65,14 @@ Es wurde definiert, dass am Schluss jedes Sprints (jede Woche) ein Meeting abgeh
 
 **Positives:**
 
-- **Verbesserungen:**
+- Erstes mal Review gemacht
+- Viele User Stories und Tasks auf dem Kanban erstellt
+- T5 schon vorgeholt -> Fokus auf das Programmieren
 
+**Verbesserungen:**
+
+- Nur wenig Zeit für Conventional commits -> Conventional commits definineren
 - Neue Userstory IDs
 - Task für Rollenberechtigungen erstellen
+- User stories, Tasks für P3, P4, Z3 erstellen
+- Konzentration im Team verbessern -> viel Ablenkung
