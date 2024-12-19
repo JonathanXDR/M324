@@ -1,3 +1,4 @@
+![DB-Schema](./images/diagram-export-19.12.2024-14_34_46.png)
 *Band*:
 - ID (Automatically Generated)
 - Name (String)
