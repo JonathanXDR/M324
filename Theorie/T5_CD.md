@@ -94,38 +94,46 @@ Feature-Flag-Toggles oder nur Feature-Toggles werden bereits in Zusammenhang mit
 
 ## 8. Was ist eine Rollback Strategy
 
-Rollback bezeichnet den Vorgang, bei dem Änderungen an einem System oder einer Datenbank rückgängig gemacht werden, um den Zustand vor einer bestimmten Operation wiederherzustellen. Dies kann notwendig sein, wenn Fehler auftreten oder eine Änderung nicht wie gewünscht funktioniert hat. Eine Rollback Strategie beschreibt die Art und Weise des Rückgangs zu einer ursprünglichen Version. Bedingungen einer effektiven Rollback Strategie sind vorallem: 1. **Frühzeitige Planung**: Eine Rollback-Strategie sollte bereits vor der Durchführung von Änderungen definiert werden, um sicherzustellen, dass bei einem Problem alle notwendigen Schritte zur Wiederherstellung eines stabilen Systems bekannt sind.2. **Backups**: Eine der wichtigsten Massnahmen für eine Rollback-Strategie ist das regelmässige Erstellen von Backups, bevor Änderungen vorgenommen werden. So können alle Daten oder Systemzustände auf einen sicheren Punkt vor der Änderung zurückgesetzt werden.2. **Automatisierte Rollbacks**: In vielen modernen Systemen werden Rollbacks automatisiert. Beispielsweise kann ein automatisches Rollback durchgeführt werden, wenn ein Fehler nach einer Datenbankmigration erkannt wird.3. **Testen der Rollback-Strategie**: Es ist wichtig, dass die Rollback-Strategie regelmässig getestet wird, um sicherzustellen, dass sie im Notfall auch tatsächlich funktioniert und alle erforderlichen Daten und Zustände wiederhergestellt werden.4. **Kommunikationsplan**: Bei grösseren Systemen oder in Unternehmen sollte ein klarer Plan für die Kommunikation während eines Rollbacks bestehen. Es sollte klar sein, wer was tun muss, wenn ein Rollback notwendig wird, um den reibungslosen Ablauf zu gewährleisten
+Rollback bezeichnet den Vorgang, bei dem Änderungen an einem System oder einer Datenbank rückgängig gemacht werden, um den Zustand vor einer bestimmten Operation wiederherzustellen. Dies kann notwendig sein, wenn Fehler auftreten oder eine Änderung nicht wie gewünscht funktioniert hat. Eine Rollback Strategie beschreibt die Art und Weise des Rückgangs zu einer ursprünglichen Version. Bedingungen einer effektiven Rollback Strategie sind vorallem:
 
-source: <https://www.harness.io/blog/understanding-software-rollbacks#:~:text=It's%20a%20planned%20part%20of,the%20developer%20can%20continue%20work.>, <https://www.linkedin.com/pulse/importance-rollback-strategies-system-changes-joshua-caldwell-48nbe>
+1. **Frühzeitige Planung**: Eine Rollback-Strategie sollte bereits vor der Durchführung von Änderungen definiert werden, um sicherzustellen, dass bei einem Problem alle notwendigen Schritte zur Wiederherstellung eines stabilen Systems bekannt sind.
+2. **Backups**: Eine der wichtigsten Massnahmen für eine Rollback-Strategie ist das regelmässige Erstellen von Backups, bevor Änderungen vorgenommen werden. So können alle Daten oder Systemzustände auf einen sicheren Punkt vor der Änderung zurückgesetzt werden.
+3. **Automatisierte Rollbacks**: In vielen modernen Systemen werden Rollbacks automatisiert. Beispielsweise kann ein automatisches Rollback durchgeführt werden, wenn ein Fehler nach einer Datenbankmigration erkannt wird.
+4. **Testen der Rollback-Strategie**: Es ist wichtig, dass die Rollback-Strategie regelmässig getestet wird, um sicherzustellen, dass sie im Notfall auch tatsächlich funktioniert und alle erforderlichen Daten und Zustände wiederhergestellt werden.
+5. **Kommunikationsplan**: Bei grösseren Systemen oder in Unternehmen sollte ein klarer Plan für die Kommunikation während eines Rollbacks bestehen. Es sollte klar sein, wer was tun muss, wenn ein Rollback notwendig wird, um den reibungslosen Ablauf zu gewährleisten
 
-source: <https://www.atlassian.com/agile/software-development/branching>
+source: <https://www.harness.io/blog/understanding-software-rollbacks#:~:text=It's%20a%20planned%20part%20of,the%20developer%20can%20continue%20work.>, <https://www.linkedin.com/pulse/importance-rollback-strategies-system-changes-joshua-caldwell-48nbe>, <https://www.atlassian.com/agile/software-development/branching>
 
-## 8. Was ist Continuous Monitoring und wie wird es umgesetzt?
+## 9. Was ist Continuous Monitoring und wie wird es umgesetzt?
 
 Continuous Monitoring ist ein systematischer Ansatz, um Anwendungen, Systeme und Infrastruktur kontinuierlich zu überwachen. Es ist ein zentraler Bestandteil von DevOps und zielt darauf ab, Performance, Sicherheit und Compliance sicherzustellen. Dabei werden Echtzeit-Daten aus verschiedenen Quellen gesammelt, analysiert und zur Identifizierung von Problemen genutzt. Continuous Monitoring hilft Unternehmen, Probleme proaktiv zu erkennen und schneller auf Systemänderungen oder Angriffe zu reagieren.
 Umsetzungsschritte:
-Datenquellen definieren: Identifikation der zu überwachenden Systeme und Metriken wie Server-Performance, Datenbankaktivitäten oder Netzwerkverkehr.
-Überwachungs-Tools einsetzen: Tools wie Nagios, Prometheus, Zabbix oder Cloud-native Lösungen wie AWS CloudWatch implementieren.
-Automatische Alarme konfigurieren: Regeln und Schwellenwerte festlegen, bei deren Überschreitung Alarme ausgelöst werden.
-Datenvisualisierung: Dashboards mit Tools wie Grafana erstellen, um Echtzeit-Informationen darzustellen.
-Integration in CI/CD-Pipelines: Monitoring-Tools in DevOps-Prozesse einbinden, um kontinuierliche Überwachung mit Entwicklungszyklen zu verknüpfen.
+
+1. Datenquellen definieren: Identifikation der zu überwachenden Systeme und Metriken wie Server-Performance, Datenbankaktivitäten oder Netzwerkverkehr.
+2. Überwachungs-Tools einsetzen: Tools wie Nagios, Prometheus, Zabbix oder Cloud-native Lösungen wie AWS CloudWatch implementieren.
+3. Automatische Alarme konfigurieren: Regeln und Schwellenwerte festlegen, bei deren Überschreitung Alarme ausgelöst werden.
+4. Datenvisualisierung: Dashboards mit Tools wie Grafana erstellen, um Echtzeit-Informationen darzustellen.
+   Integration in CI/CD-Pipelines: Monitoring-Tools in DevOps-Prozesse einbinden, um kontinuierliche Überwachung mit Entwicklungszyklen zu verknüpfen.
 
 source: <https://www.headspin.io/blog/what-is-continuous-monitoring-in-devops>
 
-## 9. Wie werden Passwörter sicher gespeichert?
+## 10. Wie werden Passwörter sicher gespeichert?
 
 Die sicherste Methode zur Speicherung von Passwörtern ist die Verwendung von Einweg-Hash-Algorithmen. Hashing ist ein Verfahren, bei dem Passwörter in kryptografisch verschlüsselte Zeichenfolgen umgewandelt werden, die nicht ohne Weiteres in das ursprüngliche Passwort zurückübersetzt werden können.
 Empfohlene Techniken:
-Bcrypt: Ein adaptiver Hash-Algorithmus, der den Arbeitsaufwand zur Entschlüsselung anpassen kann.
-Argon2: Gewinner des Password Hashing Competition (PHC), optimiert für hohe Sicherheit gegen Angriffe auf Rechenleistung.
-PBKDF2: Standardisierte Methode zur Passwortableitung mit Salt und mehreren Iterationen.
+
+1. Bcrypt: Ein adaptiver Hash-Algorithmus, der den Arbeitsaufwand zur Entschlüsselung anpassen kann.
+2. Argon2: Gewinner des Password Hashing Competition (PHC), optimiert für hohe Sicherheit gegen Angriffe auf Rechenleistung.
+3. PBKDF2: Standardisierte Methode zur Passwortableitung mit Salt und mehreren Iterationen.
+
 Best Practices:
-Salting: Füge jedem Passwort einen eindeutigen Salt hinzu, bevor es gehasht wird, um Rainbow-Table-Angriffe zu verhindern. (In einer Rainbow-Tabelle werden Hash-Werte für alle möglichen Passwort-Kombinationen berechnet und gespeichert.)
-Kein Speichern von Klartext-Passwörtern: Passwörter nie im Klartext speichern.
+
+- Salting: Füge jedem Passwort einen eindeutigen Salt hinzu, bevor es gehasht wird, um Rainbow-Table-Angriffe zu verhindern. (In einer Rainbow-Tabelle werden Hash-Werte für alle möglichen Passwort-Kombinationen berechnet und gespeichert.)
+- Kein Speichern von Klartext-Passwörtern: Passwörter nie im Klartext speichern.
 
 source: <https://beebuzz.media/wie-speichere-ich-passwoerter-sicher-in-der-datenbank>
 
-## 10. Welche Arten von Deployment gibt es?
+## 11. Welche Arten von Deployment gibt es?
 
 Direktes Deployment auf den Server:
 
@@ -146,6 +154,7 @@ Deployment über Container-Orchestrierung (z. B. Docker Swarm, Kubernetes):
 
 - Beschreibung: Containerisierte Anwendungen werden über ein Orchestrierungstool verwaltet und skaliert.
 - Notwendige Software/Umgebung:
+
   - Docker Swarm oder Kubernetes
   - Netzwerkinfrastruktur für die Orchestrierung
 
@@ -159,7 +168,7 @@ Deployment mittels Continuous Integration/Continuous Deployment (CI/CD):
 - Beschreibung: Automatisierte Pipelines bauen, testen und deployen den Code kontinuierlich.
 - Notwendige Software/Umgebung:
   - CI/CD-Tools wie Jenkins, GitLab CI, Travis CI
-Versionsverwaltungssysteme
+    Versionsverwaltungssysteme
 
 Deployment über Serverless Computing:
 

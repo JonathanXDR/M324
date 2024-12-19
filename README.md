@@ -8,6 +8,7 @@ DevOps-Prozesse mit Tools unterstützen
 2. [The Three Ways](Theorie/T2_The_Three_Ways.md)
 3. [Prozesse](Theorie/T3_Prozesse.md)
 4. [CI](Theorie/T4_CI.md)
+5. [CD](Theorie/T5_CD.md)
 
 ## Themenblöcke
 

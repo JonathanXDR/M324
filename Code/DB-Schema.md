@@ -1,5 +1,6 @@
 ![DB-Schema](./images/diagram-export-19.12.2024-14_34_46.png)
-*Band*:
+_Band_:
+
 - ID (Automatically Generated)
 - Name (String)
 - Genre (Genre ID)
@@ -7,17 +8,20 @@
 - Bandmitglieder (Integer)
 - Auflösungsdatum (Date) NULLABLE (Not greater - than Gründungsdatum)
 
-*Genre*:
+_Genre_:
+
 - ID (Automatically Generated)
 - Name (String)
 
-*Album*:
+_Album_:
+
 - ID (Automatically Generated)
 - Titel (String)
 - Band (Band ID)
 - Label (Label ID)
 - Verkaufspreis (Integer)
 
-*Label*:
+_Label_:
+
 - ID (Automatically Generated)
 - Name (String)
