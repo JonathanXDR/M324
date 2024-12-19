@@ -74,6 +74,7 @@ source: <https://launchdarkly.com/blog/deployment-strategies/>, <https://www.apw
 Beim Canary Deployment wird die neue Version schrittweise eingeführt, indem der Produktionsverkehr langsam von der alten Version auf die neue umgeleitet wird. Zum Beispiel könnte die alte Version zunächst 75 % des Verkehrs übernehmen, während die neue Version nur 25 % bearbeitet.
 
 **Phase 1**: In dieser Phase wird die neue Version nur einer kleinen Gruppe von Benutzern, den sogenannten „Canary“-Benutzern, zur Verfügung gestellt. Diese Gruppe wird entweder zufällig oder anhand bestimmter Merkmale ausgewählt.
+
 **Phase 2**: Wenn Phase 1 erfolgreich verläuft, wird die neue Version schrittweise allen Nutzern zugänglich gemacht. Falls jedoch Probleme auftreten, kann die neue Version einfach zurückgesetzt werden, indem der Verkehr wieder auf die ältere Version umgeleitet wird.
 Canary Deployment ermöglicht eine gründliche Leistungsüberwachung und erleichtert das Zurücksetzen auf die alte Version, falls etwas schiefgeht. Allerdings erfordert diese Methode eine gut strukturierte Testumgebung und kann langsamer und zeitintensiver sein als andere Deployment-Strategien.
 
@@ -83,10 +84,14 @@ source: <https://launchdarkly.com/blog/deployment-strategies/>, <https://www.apw
 
 ## 6. Was ist A/B Testing?
 
-Beim A/B Testing wird die neue Version der Software parallel zur alten Version bereitgestellt, jedoch nur für eine ausgewählten Benutzergruppe. Diese Gruppe wird anhand von Faktoren wie Standort, Gerätetyp oder Betriebssystem ausgewählt, um die Leistung der neuen Funktionen zu testen. Nachdem genug Daten gesammelt wurden, wird die Version mit den besten Ergebnissen für alle Nutzer freigegeben. Diese Methode ermöglicht auf Daten basierten Entscheidungen, erfordert jedoch komplexe Technik wie Load Balancer und ist aufwändiger in der Implementierung. Der wesentliche Unterschied zum Canary-Deployment ist der Fokus auf Performance der neuen Version und Nutzerfeedback, wobei Canary sich nur um die schrittweise Bereitstellung kümmert. 
+Beim A/B Testing wird die neue Version der Software parallel zur alten Version bereitgestellt, jedoch nur für eine ausgewählten Benutzergruppe. Diese Gruppe wird anhand von Faktoren wie Standort, Gerätetyp oder Betriebssystem ausgewählt, um die Leistung der neuen Funktionen zu testen. Nachdem genug Daten gesammelt wurden, wird die Version mit den besten Ergebnissen für alle Nutzer freigegeben. Diese Methode ermöglicht auf Daten basierten Entscheidungen, erfordert jedoch komplexe Technik wie Load Balancer und ist aufwändiger in der Implementierung. Der wesentliche Unterschied zum Canary-Deployment ist der Fokus auf Performance der neuen Version und Nutzerfeedback, um Features anzupassen. Wobei Canary sich nur um die schrittweise Bereitstellung kümmert. 
 <img src="https://www.apwide.com/wp-content/uploads/2024/07/AB-Testing-Deployment-Strategy-2.gif"/>
 
-source: <https://launchdarkly.com/blog/deployment-strategies/>, <https://www.apwide.com/8-deployment-strategies-explained-and-compared>
+**Beispiel**: Spotify führt ständig A/B Tests durch, bevor neue Features allgemein zu veröffentlichen. Wenn sich eine Feature vollständig implementiert und getested wurde, wird sie schrittweise mit einer Art Canary Deployment bereitgestellt  
+
+source: <https://launchdarkly.com/blog/deployment-strategies/>
+source: <https://www.apwide.com/8-deployment-strategies-explained-and-compared> 
+source: <https://community.spotify.com/t5/Android/How-our-app-release-process-works/td-p/1237092>
 
 ## 7. Feature Toggles
 
