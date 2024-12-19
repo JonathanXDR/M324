@@ -59,3 +59,13 @@ Es wurde definiert, dass am Schluss jedes Sprints (jede Woche) ein Meeting abgeh
 - D2 anpassen
 - Lernjournal vorzu erfassen und pushen (Nicht am Schluss)
 - Alle Userstories erstellen
+- Anpassung der Userstory IDs auf `<User Story oder Task>: Titel` Beispielsweise: `User Story: Band erfassen`
+
+##### Retrospective
+
+**Positives:**
+
+- **Verbesserungen:**
+
+- Neue Userstory IDs
+- Task für Rollenberechtigungen erstellen
