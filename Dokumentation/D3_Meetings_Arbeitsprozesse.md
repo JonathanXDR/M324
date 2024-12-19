@@ -4,15 +4,14 @@
 
 ### Rollen
 
-| Rolle              | Beschreibung | Name          |
-| ------------------ | ------------ | ------------- |
-| Scrum Master       |              | Zakria Samma  |
-| Product Owner (PO) |              | Zakria Samma  |
-| Steakholder        |              | Thanam Pangri |
-| Developer          |              | Jonathan Russ |
-| Developer          |              | Pascal Rieder |
-| Developer          |              | Jon Landa     |
-| Developer          |              | Kalel Jong    |
+| Rolle             | Beschreibung                                                                                                                                                                                                                                       | Name                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Scrum Master**  | Der Scrum Master ist verantwortlich für die Implementierung und Einhaltung des Scrum-Prozesses. Er unterstützt das Team dabei, effektiv zu arbeiten, beseitigt Hindernisse und stellt sicher, dass Scrum-Praktiken korrekt angewendet werden.      | Zakria Samma                                        |
+| **Product Owner** | Der Product Owner vertritt die Interessen der Stakeholder und Endbenutzer. Er ist verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um sicherzustellen, dass das Team wertvolle Ergebnisse liefert. | Zakria Samma                                        |
+| **Stakeholder**   | Ein Stakeholder ist eine Person oder Gruppe, die ein Interesse am Projekt hat und von dessen Ergebnis betroffen ist. Stakeholder liefern Anforderungen, Feedback und sind an wichtigen Entscheidungen beteiligt.                                   | Thanam Pangri                                       |
+| **Developer**     | Entwickler sind Teammitglieder, die für die Umsetzung der Anforderungen verantwortlich sind. Sie entwickeln, testen und liefern funktionierende Produktinkremente entsprechend den Vorgaben des Product Owners.                                    | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong |
+
+Diese Rollenbeschreibungen helfen dabei, die Verantwortlichkeiten und Zuständigkeiten innerhalb des Teams klar zu definieren und den Arbeitsprozess effizient zu gestalten.
 
 ### Daily Meetings
 
@@ -50,3 +49,13 @@ Es wurde definiert, dass am Schluss jedes Sprints (jede Woche) ein Meeting abgeh
 
 - Conventional commits vor in man erkannt an welche Userstory gearbeitet wurde.
 - Neue Userstory IDs. Ab jetzt: `<Project-Userstory>` Beispielsweise: `T5-1`
+
+#### 19.12.2024
+
+##### Daily Meeting
+
+- Conventional commits definineren
+- T5 fertig machen
+- D2 anpassen
+- Lernjournal vorzu erfassen und pushen (Nicht am Schluss)
+- Alle Userstories erstellen
