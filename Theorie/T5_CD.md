@@ -83,7 +83,7 @@ source: <https://launchdarkly.com/blog/deployment-strategies/>, <https://www.apw
 
 ## 6. Was ist A/B Testing?
 
-Beim A/B Testing Deployment wird die neue Version der Software parallel zur alten Version bereitgestellt, jedoch nur einer ausgewählten Benutzergruppe. Diese Gruppe wird anhand von Faktoren wie Standort, Gerätetyp oder Betriebssystem ausgewählt, um die Leistung der neuen Funktionen zu testen. Nachdem genug Daten gesammelt wurden, wird die Version mit den besten Ergebnissen für alle Nutzer freigegeben. Diese Methode ermöglicht fundierte Entscheidungen, erfordert jedoch komplexe Technik wie Load Balancer und ist aufwändiger in der Implementierung.
+Beim A/B Testing wird die neue Version der Software parallel zur alten Version bereitgestellt, jedoch nur für eine ausgewählten Benutzergruppe. Diese Gruppe wird anhand von Faktoren wie Standort, Gerätetyp oder Betriebssystem ausgewählt, um die Leistung der neuen Funktionen zu testen. Nachdem genug Daten gesammelt wurden, wird die Version mit den besten Ergebnissen für alle Nutzer freigegeben. Diese Methode ermöglicht auf Daten basierten Entscheidungen, erfordert jedoch komplexe Technik wie Load Balancer und ist aufwändiger in der Implementierung. Der wesentliche Unterschied zum Canary-Deployment ist der Fokus auf Performance der neuen Version und Nutzerfeedback, wobei Canary sich nur um die schrittweise Bereitstellung kümmert. 
 <img src="https://www.apwide.com/wp-content/uploads/2024/07/AB-Testing-Deployment-Strategy-2.gif"/>
 
 source: <https://launchdarkly.com/blog/deployment-strategies/>, <https://www.apwide.com/8-deployment-strategies-explained-and-compared>
