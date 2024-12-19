@@ -148,7 +148,7 @@ Deployment mittels Containerisierung (z. B. Docker):
 - Beschreibung: Anwendungen werden in Containern verpackt, die alle notwendigen Abhängigkeiten enthalten, und auf dem Zielsystem ausgeführt.
 - Notwendige Software/Umgebung:
   - Docker
-  - Container-Orchestrierungstools (z. B. Kubernetes) für größere Umgebungen
+  - Container-Orchestrierungstools (z. B. Kubernetes) für grössere Umgebungen
 
 Deployment über Container-Orchestrierung (z. B. Docker Swarm, Kubernetes):
 
