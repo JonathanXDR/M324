@@ -84,10 +84,15 @@ Wir verwenden [Semantic Versioning (SemVer)](https://semver.org/) in der Form `M
    Sobald ein Release Branch in `main` gemerged ist, setzen wir einen Git-Tag mit der finalen Version.  
    Beispiel: Merge von `release/1.2.0` in `main` führt zu `v1.2.0`.
 
-3. **Feature und Bugfix Branches**:  
-   Haben keinen direkten Einfluss auf die Versionierung, bis sie in einen Release Branch oder direkt (im Falle eines Hotfix) in `main` gemerged werden.
+3. **Features:**
 
-4. **Hotfixes**:  
+   Neue Features werden grundsätzlich im Paket mit anderen Änderungen released. Sobald ein Release Branch erstellt wird (z. B. `release/x.y.z`), werden alle fertiggestellten Features aus `develop` integriert und zusammen getestet, bevor der Merge in `main` erfolgt. Einzelreleases von Features sind nur in Ausnahmefällen möglich, wenn ein Feature eine kritische neue Funktionalität bereitstellt, die unabhängig veröffentlicht werden muss.
+
+4. **Bugfixes:**
+
+   Bugfixes, die vor einem Release Branch identifiziert werden, werden wie Features gehandhabt und zusammen im nächsten Release integriert.
+
+5. **Hotfixes**:  
    Ein Hotfix an einer produktiven Version erhöht in der Regel nur die PATCH-Version.  
    Beispiel: Aktuell produktive Version ist `1.2.0`. Ein kritischer Fehler wird per `hotfix/48-server-crash` behoben und nach `main` gemerged, anschliessend wird auf `1.2.1` getaggt.
 
