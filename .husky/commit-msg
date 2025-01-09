@@ -1,1 +1,1 @@
-npx commitlint --edit
+bunx --no -- commitlint --config Code/commitlint.config.ts --edit "$1"

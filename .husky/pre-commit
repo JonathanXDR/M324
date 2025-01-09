@@ -1,1 +1,1 @@
-npx lint-staged
+bunx lint-staged --config Code/lint-staged.config.js
