@@ -1,5 +1,5 @@
 {
-  "name": "m324-musicplatform",
+  "name": "m324-music-platform",
   "module": "src/index.ts",
   "type": "module",
   "devDependencies": {
