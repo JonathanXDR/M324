@@ -9,3 +9,36 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Band {
+  id              Int       @id @default(autoincrement())
+  name            String
+  genre           Genre     @relation(fields: [genreId], references: [id])
+  foundingDate    DateTime
+  members         Int
+  dissolutionDate DateTime?
+  genreId         Int
+  albums          Album[]
+}
+
+model Genre {
+  id    Int    @id @default(autoincrement())
+  name  String
+  bands Band[]
+}
+
+model Album {
+  id      Int    @id @default(autoincrement())
+  band    Band   @relation(fields: [bandId], references: [id])
+  title   String
+  price   Int
+  label   Label  @relation(fields: [labelId], references: [id])
+  bandId  Int
+  labelId Int
+}
+
+model Label {
+  id     Int     @id @default(autoincrement())
+  name   String
+  albums Album[]
+}
