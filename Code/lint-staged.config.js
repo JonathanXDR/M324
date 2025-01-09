@@ -1,5 +1,5 @@
 export default {
-  "**/*.{js,jsx,ts,tsx,vue,json,css,scss,md}": (stagedFiles) => [
+  "*.{js,jsx,ts,tsx,vue,json,css,scss,md}": (stagedFiles) => [
     `prettier --write ${stagedFiles.join(" ")}`,
     // `eslint --flag unstable_ts_config --fix ${stagedFiles.join(" ")}`,
   ],

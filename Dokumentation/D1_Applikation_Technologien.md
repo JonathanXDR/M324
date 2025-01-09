@@ -18,4 +18,4 @@ Basierend auf JavaScript, verwenden wir TypeScript damit uns weniger Fehler wäh
 
 ### Begründung
 
-Wir sind alle mit MariaDB vertraut und beherrschen SQL. Mit AWS können ebenfalls alle umgehen und wir verwenden den Service, um unsere Datenbank zu hosten. Als ORM verwenden wir Prisma, da ORMs den Vorteil bieten, keine direkten SQL-Abfragen schreiben zu müssen. 
+Wir sind alle mit MariaDB vertraut und beherrschen SQL. Mit AWS können ebenfalls alle umgehen und wir verwenden den Service, um unsere Datenbank zu hosten. Als ORM verwenden wir Prisma, da ORMs den Vorteil bieten, keine direkten SQL-Abfragen schreiben zu müssen.
