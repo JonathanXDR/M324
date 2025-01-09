@@ -1,0 +1,10 @@
+{
+  "name": "m324",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "prepare": "husky"
+  }
+}
