@@ -2,8 +2,8 @@ import { Router } from 'express';
 
 const router = Router();
 
-router.get('/test', (req, res) => {
-    res.json({ message: 'This is a test route!' });
+router.get('/', (req, res) => {
+    res.json({ message: 'list of bands!' });
 });
 
 export default router;

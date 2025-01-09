@@ -1,14 +1,17 @@
 import express from 'express';
-import exampleRoute from './routes/testRoute';
+import albumRoute from './routes/albums';
+import bandRoute from './routes/bands';
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use('/', exampleRoute);
+app.use('/bands', bandRoute);
+app.use('/albums', albumRoute);
+
 
 app.get('/', (req, res) => {
-    res.send('Hello, Bun with TypeScript and Express.js!');
+    res.send('Hello World!');
 });
 
 app.listen(port, () => {
