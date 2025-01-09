@@ -18,13 +18,13 @@ model Band {
   members         Int
   dissolutionDate DateTime?
   genreId         Int
-  Albums          Album[]
+  albums          Album[]
 }
 
 model Genre {
   id    Int    @id @default(autoincrement())
   name  String
-  Bands Band[]
+  bands Band[]
 }
 
 model Album {
@@ -40,5 +40,5 @@ model Album {
 model Label {
   id     Int     @id @default(autoincrement())
   name   String
-  Albums Album[]
+  albums Album[]
 }
