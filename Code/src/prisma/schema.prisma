@@ -11,34 +11,34 @@ datasource db {
 }
 
 model Band {
-  id               Int       @id @default(autoincrement())
-  name             String
-  genre            Genre     @relation(fields: [genreId], references: [id])
-  gruendungsdatum  DateTime
-  bandmitglieder   Int
-  aufloesungsdatum DateTime?
-  genreId          Int
-  Album            Album[]
+  id              Int       @id @default(autoincrement())
+  name            String
+  genre           Genre     @relation(fields: [genreId], references: [id])
+  foundingDate    DateTime
+  members         Int
+  dissolutionDate DateTime?
+  genreId         Int
+  Albums          Album[]
 }
 
 model Genre {
-  id   Int    @id @default(autoincrement())
-  name String
-  Band Band[]
+  id    Int    @id @default(autoincrement())
+  name  String
+  Bands Band[]
 }
 
 model Album {
-  id            Int    @id @default(autoincrement())
-  band          Band   @relation(fields: [bandId], references: [id])
-  titel         String
-  verkaufspreis Int
-  label         Label  @relation(fields: [labelId], references: [id])
-  bandId        Int
-  labelId       Int
+  id      Int    @id @default(autoincrement())
+  band    Band   @relation(fields: [bandId], references: [id])
+  title   String
+  price   Int
+  label   Label  @relation(fields: [labelId], references: [id])
+  bandId  Int
+  labelId Int
 }
 
 model Label {
-  id    Int     @id @default(autoincrement())
-  name  String
-  Album Album[]
+  id     Int     @id @default(autoincrement())
+  name   String
+  Albums Album[]
 }
