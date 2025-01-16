@@ -7,7 +7,6 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  // Create Genres
   const rock = await prisma.genre.create({
     data: { name: 'Rock' },
   });
@@ -16,7 +15,6 @@ async function main() {
     data: { name: 'Jazz' },
   });
 
-  // Create Labels
   const sony = await prisma.label.create({
     data: { name: 'Sony Music' },
   });
@@ -25,7 +23,6 @@ async function main() {
     data: { name: 'Universal Music' },
   });
 
-  // Create Bands
   const beatles = await prisma.band.create({
     data: {
       name: 'The Beatles',
