@@ -13,6 +13,9 @@ router.get("/", async (_req, res) => {
         },
       },
     },
+    orderBy: {
+      name: "asc",
+    },
   });
   res.json(bands);
 });
