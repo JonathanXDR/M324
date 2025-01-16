@@ -14,7 +14,13 @@ router.get("/", async (_req, res) => {
       },
     },
   });
-  res.json(bands);
+
+  const modifiedBands = bands.map(band => ({
+    ...band,
+    active: band.dissolutionDate === null,
+  }));
+
+  res.json(modifiedBands);
 });
 
 export default router;
