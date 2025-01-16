@@ -17,4 +17,30 @@ router.get("/", async (_req, res) => {
   res.json(bands);
 });
 
+router.post("/", async (_req, res) => {
+  const {
+    name,
+    genre,
+    foundingDate,
+    members,
+    dissolutionDate,
+    genreId,
+    albums,
+  } = _req.body;
+
+  const post = await prisma.band.create({
+    data: {
+      name,
+      genre,
+      foundingDate,
+      members,
+      dissolutionDate,
+      genreId,
+      albums,
+    },
+  });
+
+  res.json(post);
+});
+
 export default router;
