@@ -16,7 +16,7 @@ router.get("/", async (_req, res) => {
   });
 
   if (!bands || bands.length === 0) {
-    res.json({ success: false, data: "No Bands found! :(" });
+    res.status(404).json({ success: false, data: "No Bands found! :(" });
   }
 
   res.json({ success: true, data: bands });
@@ -26,7 +26,7 @@ router.get("/:id", async (_req, res) => {
   const id = parseInt(_req.params.id);
   const band = await prisma.band.findMany({
     where: {
-      id: id
+      id
     },
     include: {
       genre: true,
@@ -39,7 +39,7 @@ router.get("/:id", async (_req, res) => {
   });
 
   if (!band || band.length === 0) {
-    res.json({ success: false, data: "No Band found with the ID: " + id });
+    res.status(404).json({ success: false, data: "No Band found with the ID: " + id });
   }
 
   res.json({ success: true, data: band });
