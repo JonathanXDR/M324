@@ -1,5 +1,5 @@
 import { Label } from './../../node_modules/.prisma/client/index.d';
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 import type { Album, Band } from "@prisma/client";
 import prisma from "../db/prisma";
 
@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   res.json({ message: "list of albums!" });
 });
 
-router.post("/", async (req, res) => {
+router.post("/", async (req: Request, res: Response) => {
   const data = req.body;
 
   /* Title */
@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
   const bands: Array<Band> = response.data;
   const dbBand = bands.find((b) => b.name === band);
   if (!dbBand) {
-    return res.status(400).json({ error: "Band not found" });
+    res.status(404).send();
   }
 
   /* Price */
@@ -39,6 +39,9 @@ router.post("/", async (req, res) => {
       name: label,
     },
   });
+  if (!dbLabel) {
+    res.status(404).send();
+  }
 
   const newAlbum = await prisma.album.create({
     data: {
@@ -46,7 +49,7 @@ router.post("/", async (req, res) => {
       releaseDate: releaseDate,
       price: price,
       labelId: dbLabel!.id,
-      bandId: dbBand.id,
+      bandId: dbBand!.id,
     },
   });
 
