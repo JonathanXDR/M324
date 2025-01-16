@@ -6,10 +6,10 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "prepare": "husky",
-    "start": "bun run src/index.ts"
+    "start": "bun --hot run src/index.ts"
   },
   "dependencies": {
-    "@prisma/client": "^6.2.1",
+    "@prisma/client": "6.2.1",
     "@types/express": "^5.0.0",
     "express": "^4.21.2"
   },
@@ -20,9 +20,12 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
-    "prisma": "^6.2.1"
+    "prisma": "6.2.1"
   },
   "peerDependencies": {
     "typescript": "^5.7.3"
+  },
+  "prisma": {
+    "seed": "bun prisma/seed.ts"
   }
 }
