@@ -1,3 +1,7 @@
+/*
+ This file was created by ChatGPT
+*/
+
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
