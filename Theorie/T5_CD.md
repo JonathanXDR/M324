@@ -27,6 +27,7 @@ source: <https://www-puppet-com.translate.goog/blog/continuous-delivery-vs-deplo
 - **Manueller Aufwand**: Verlangsamt den Prozess.
 - **Freigabeabhängigkeit**: Schlechte Prozesse können Engpässe schaffen.
 - **Unvollständige Automatisierung**: Nutzt Automatisierung nicht vollständig aus.
+- **Tests**: Da kein automatischer Prozess für das Deployment verantwortlich ist, müssen zahlreiche Tests durchgeführt werden, die für die Nachhaltigkeit und Kompatibilität der Abhängigkeiten sorgen.
 
 **Beispiel**: Ein Team testet automatisch, entscheidet aber manuell, ob ein neues Feature freigegeben wird.
 
