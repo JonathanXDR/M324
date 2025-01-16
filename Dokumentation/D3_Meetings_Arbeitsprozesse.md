@@ -76,3 +76,34 @@ Es wurde definiert, dass am Schluss jedes Sprints (jede Woche) ein Meeting abgeh
 - Task für Rollenberechtigungen erstellen
 - User stories, Tasks für P3, P4, Z3 erstellen
 - Konzentration im Team verbessern -> viel Ablenkung
+
+#### 09.01.2025
+
+##### Daily Meeting
+
+- Beginnen an P2 zu arbeiten
+
+##### Retrospective
+
+**Positives:**
+
+**Verbesserungen:**
+
+#### 16.01.2025
+
+##### Daily Meeting
+
+- Weiter an P2 arbeiten
+
+##### Retrospective
+
+**Positives:**
+
+- Branching Strategie wurde eingehalten
+- Commit Strategie urde eingehalten
+- T5 Review gut gelaufen
+- Produktives Arbeiten
+
+**Verbesserungen:**
+
+- Schrum Master nicht da -> Evt. Scrum Master wechseln
