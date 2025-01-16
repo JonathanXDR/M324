@@ -6,7 +6,7 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "prepare": "husky",
-    "start": "bun run src/index.ts"
+    "start": "bun --hot run src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
