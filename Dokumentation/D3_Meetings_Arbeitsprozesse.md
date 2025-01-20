@@ -4,106 +4,114 @@
 
 ### Rollen
 
-| Rolle             | Beschreibung                                                                                                                                                                                                                                       | Name                                                |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| **Scrum Master**  | Der Scrum Master ist verantwortlich für die Implementierung und Einhaltung des Scrum-Prozesses. Er unterstützt das Team dabei, effektiv zu arbeiten, beseitigt Hindernisse und stellt sicher, dass Scrum-Praktiken korrekt angewendet werden.      | Zakria Samma                                        |
-| **Product Owner** | Der Product Owner vertritt die Interessen der Stakeholder und Endbenutzer. Er ist verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um sicherzustellen, dass das Team wertvolle Ergebnisse liefert. | Zakria Samma                                        |
-| **Stakeholder**   | Ein Stakeholder ist eine Person oder Gruppe, die ein Interesse am Projekt hat und von dessen Ergebnis betroffen ist. Stakeholder liefern Anforderungen, Feedback und sind an wichtigen Entscheidungen beteiligt.                                   | Thanam Pangri                                       |
-| **Developer**     | Entwickler sind Teammitglieder, die für die Umsetzung der Anforderungen verantwortlich sind. Sie entwickeln, testen und liefern funktionierende Produktinkremente entsprechend den Vorgaben des Product Owners.                                    | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong |
+| Rolle             | Beschreibung                                                                                                                                                                                                          | Name                                                |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Scrum Master**  | Verantwortlich für die Implementierung und Einhaltung des Scrum-Prozesses. Unterstützt das Team dabei, effektiv zu arbeiten, beseitigt Hindernisse und stellt sicher, dass Scrum-Praktiken korrekt angewendet werden. | Zakria Samma                                        |
+| **Product Owner** | Vertritt die Interessen der Stakeholder und Endbenutzer. Verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um wertvolle Ergebnisse sicherzustellen.                    | Zakria Samma                                        |
+| **Stakeholder**   | Person oder Gruppe mit Interesse am Projekt, die Anforderungen, Feedback und wichtige Entscheidungen liefert.                                                                                                         | Thanam Pangri                                       |
+| **Developer**     | Teammitglieder, die Anforderungen umsetzen, testen und funktionierende Produktinkremente gemäss den Vorgaben des Product Owners liefern.                                                                              | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong |
 
-Diese Rollenbeschreibungen helfen dabei, die Verantwortlichkeiten und Zuständigkeiten innerhalb des Teams klar zu definieren und den Arbeitsprozess effizient zu gestalten.
+### Meeting-Typen
 
-### Daily Meetings
+#### Daily Meetings
 
-Es wurde definiert, dass mitten jedes Sprints (jede Woche) ein Daily Meeting abgehalten wird. In diesem Meeting werden erst die am vorherigen Tag gelösten Aufgaben besprochen und vom Stakeholder kontrolliert sowie kritisch reflektiert. Danach wird darüber berichtet, was für den Tag geplant worden ist und was für Userstories bearbeitet werden. Zusätzlich wird es ein kurzes Update über die gestrige Retrospektive gehalten.
+- Finden wöchentlich mitten im Sprint statt.
+- Themen:
+  - Besprechung der am Vortag gelösten Aufgaben (vom Stakeholder kontrolliert und reflektiert).
+  - Planung der täglichen Aufgaben und User Stories.
+  - Kurzes Update zur gestrigen Retrospektive.
 
-### Retrospective (KVP)
+#### Retrospective (KVP)
 
-Es wurde definiert, dass am Schluss jedes Sprints (jede Woche) ein Meeting abgehalten wird, in dem der Tag reflektiert wird und Verbesserungsvorschläge für die nächste Woche gemacht werden. Die Retrospektive wird jeweils am Donnerstag um ca. 16:15 - 16:30 stattfinden.
+- Wöchentliche Meetings am Ende des Sprints (Donnerstags ca. 16:15 - 16:30).
+- Themen:
+  - Reflexion der Woche.
+  - Verbesserungsvorschläge für die nächste Woche.
 
-### Protokolle
+### Meeting-Protokolle
 
 #### 21.11.2024
 
-##### Daily Meeting
+**Daily Meeting:**
 
-- Userstory für alle Tätigkeiten (Aufgaben) erfassen
-- Subtask für alle US erfassen und entsprechend zuordnen
-- Planning/Meeting strukturieren/ definieren
-- KVP am Ende des Unterrichtstag planen
+- User Stories für alle Aufgaben erstellen.
+- Subtasks zu User Stories erfassen und zuordnen.
+- Planung/Meeting-Struktur definieren.
+- KVP für den Unterrichtstag planen.
 
-##### Retrospective
+---
 
 #### 02.12.2024
 
+---
+
 #### 12.12.2024
 
-##### Retrospective
+**Retrospective:**
 
-**Positives:**
+- **Positives:**
+  - Konstruktive Kritik am Stakeholder führte zu einer Notenverbesserung um 0.2.
+  - D2 wurde schneller als geplant abgeschlossen; Aufgaben-Grösse wurde falsch eingeschätzt.
+- **Verbesserungen:**
+  - Conventional Commits einführen, um die zugehörigen User Stories besser zu identifizieren.
+  - Neue User Story IDs (z. B. `T5-1`).
 
-- Konstruktive Kritik am Stakeholder gegeben und haben so noch 0.2 für unsere Note herausgeholt.
-- D2 ist schneller als geplant angekommen. Die Size für die Aufgabe war also falsch eingeschätzt.
-
-**Verbesserungen:**
-
-- Conventional commits vor in man erkannt an welche Userstory gearbeitet wurde.
-- Neue Userstory IDs. Ab jetzt: `<Project-Userstory>` Beispielsweise: `T5-1`
+---
 
 #### 19.12.2024
 
-##### Daily Meeting
+**Daily Meeting:**
 
-- Conventional commits definineren
-- T5 fertig machen
-- D2 anpassen
-- D5: Lernjournal vorzu erfassen und pushen (Nicht am Schluss)
-- Alle Userstories erstellen
-- Anpassung der Userstory IDs auf `<User Story oder Task>: Titel` Beispielsweise: `User Story: Band erfassen`
+- Definition von Conventional Commits.
+- T5 fertigstellen.
+- D2 anpassen.
+- Lernjournal (D5) regelmässig erfassen und pushen.
+- User Stories erstellen.
+- Anpassung der User Story IDs (z. B. `User Story: Band erfassen`).
 
-##### Retrospective
+**Retrospective:**
 
-**Positives:**
+- **Positives:**
+  - Erstes Review erfolgreich durchgeführt.
+  - Viele User Stories und Tasks auf dem Kanban erstellt.
+  - Fokus auf Programmieren bei T5.
+- **Verbesserungen:**
+  - Mehr Zeit für Conventional Commits.
+  - Neue User Story IDs definieren.
+  - Tasks für Rollenberechtigungen erstellen.
+  - User Stories und Tasks für P3, P4, Z3 erstellen.
+  - Ablenkungen im Team reduzieren.
 
-- Erstes mal Review gemacht
-- Viele User Stories und Tasks auf dem Kanban erstellt
-- T5 schon vorgeholt -> Fokus auf das Programmieren
-
-**Verbesserungen:**
-
-- Nur wenig Zeit für Conventional commits -> Conventional commits definineren
-- Neue Userstory IDs
-- Task für Rollenberechtigungen erstellen
-- User stories, Tasks für P3, P4, Z3 erstellen
-- Konzentration im Team verbessern -> viel Ablenkung
+---
 
 #### 09.01.2025
 
-##### Daily Meeting
+**Daily Meeting:**
 
-- Beginnen an P2 zu arbeiten
+- Alle verbleibenden Tasks von P2 schätzen.
+- Beginn mit P2.
 
-##### Retrospective
+**Retrospective:**
 
-**Positives:**
+- **Positives:**
+  - _Noch offen._
+- **Verbesserungen:**
+  - _Noch offen._
 
-**Verbesserungen:**
+---
 
 #### 16.01.2025
 
-##### Daily Meeting
+**Daily Meeting:**
 
-- Weiter an P2 arbeiten
+- Weiterarbeit an P2 (kontinuierliches Arbeiten).
 
-##### Retrospective
+**Retrospective:**
 
-**Positives:**
-
-- Branching Strategie wurde eingehalten
-- Commit Strategie urde eingehalten
-- T5 Review gut gelaufen
-- Produktives Arbeiten
-
-**Verbesserungen:**
-
-- Schrum Master nicht da -> Evt. Scrum Master wechseln
+- **Positives:**
+  - Branching-Strategie eingehalten.
+  - Commit-Strategie eingehalten.
+  - T5-Review verlief gut.
+  - Produktives Arbeiten.
+- **Verbesserungen:**
+  - Scrum Master war abwesend; Diskussion über Wechsel des Scrum Masters.
