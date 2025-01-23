@@ -24,7 +24,7 @@ router.post("/", async (req: Request, res: Response) => {
   const band: string = data.band;
   const appBaseUrl = `${req.protocol}://${req.get('host')}`;
   const response = await axios.get(`${appBaseUrl}/bands`);
-  const bands: Array<Band> = response.data;
+  const bands: Array<Band> = response.data.data;
   const dbBand = bands.find((b) => b.name === band);
   if (!dbBand) {
     return res.status(404).send()
@@ -51,6 +51,10 @@ router.post("/", async (req: Request, res: Response) => {
       price: price,
       labelId: dbLabel?.id,
       bandId: dbBand?.id,
+    },
+    include: {
+      label: true,
+      band: true,
     },
   });
 
