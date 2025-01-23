@@ -1,0 +1,36 @@
+name: CI-Pipeline
+run-name: ${{ github.actor }} pushed changes to ${{ github.ref_name }}
+on:
+    pull_request:
+        types: [opened, edited]
+    push:
+        branches:
+            - main
+            - develop
+jobs:
+    retrieve-branch:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v2
+
+            - name: Extract branch name
+              shell: bash
+              run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+              id: extract_branch
+            
+    create-release:
+        runs-on: ubuntu-latest
+        if: ${{ ! startsWith(github.ref, 'refs/release/') }}
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v2
+            - name: git config
+              run: |
+                git config user.name "${GITHUB_ACTOR}"
+                git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+            - run: npm install -g release
+            - run: release ${{ steps.extract_branch.outputs.branch }}
+
+
+
