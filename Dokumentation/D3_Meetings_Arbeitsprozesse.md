@@ -115,3 +115,25 @@
   - Produktives Arbeiten.
 - **Verbesserungen:**
   - Scrum Master war abwesend; Diskussion über Wechsel des Scrum Masters.
+
+## Arbeitsprozesse
+
+### Commit Messages
+
+Damit die Commit Messages einheitlich und aussagekräftig sind, verwenden wir [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Die Commit Messages folgen dem Schema:
+
+```
+<type>[optional scope]: <description>
+```
+
+Beispiel:
+
+```
+feat: add new feature
+fix: correct minor typo
+docs: update README.md
+```
+
+Damit dieses Konventionen auch eingehalten werden, wird vor jedem Git Commit ein Git Hook ausgeführt, der die Commit Message überprüft.
+
+### Code Qualität
