@@ -44,8 +44,6 @@ router.post("/", async (req: Request, res: Response) => {
     return res.status(404).send();
   }
 
-  console.log(dbLabel, dbBand);
-
   const newAlbum = await prisma.album.create({
     data: {
       title: title,
