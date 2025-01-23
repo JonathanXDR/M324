@@ -52,6 +52,10 @@ router.post("/", async (req: Request, res: Response) => {
       labelId: dbLabel?.id,
       bandId: dbBand?.id,
     },
+    include: {
+      label: true,
+      band: true,
+    },
   });
 
   return res.json(newAlbum).send();
