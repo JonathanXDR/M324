@@ -1,5 +1,6 @@
 import { Router } from "express";
 import prisma from "../db/prisma";
+import type { Album } from "@prisma/client";
 
 const router = Router();
 
@@ -30,13 +31,18 @@ router.post("/", async (_req, res) => {
 
   const post = await prisma.band.create({
     data: {
-      name,
-      genre,
       foundingDate,
       members,
       dissolutionDate,
       genreId,
-      albums,
+      albums: {
+        create: albums.map((album: Album) => ({
+          title: album.title,
+          price: album.price,
+          labelId: album.labelId,
+        })),
+      },
+      name,
     },
   });
 
