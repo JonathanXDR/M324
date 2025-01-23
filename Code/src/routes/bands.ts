@@ -12,7 +12,10 @@ router.get("/", async (_req, res) => {
           label: true,
         },
       },
-    }
+    },
+    orderBy: {
+      name: "asc",
+    },
   });
 
   if (!bands || bands.length === 0) {
@@ -31,20 +34,14 @@ router.get("/:id", async (_req, res) => {
   const id = parseInt(_req.params.id);
   const band = await prisma.band.findMany({
     where: {
-      id
+      id,
     },
-    include: {
-      genre: true,
-      albums: {
-        include: {
-          label: true,
-        },
-      },
-    }
   });
 
   if (!band || band.length === 0) {
-    res.status(404).json({ success: false, data: "No Band found with the ID: " + id });
+    res
+      .status(404)
+      .json({ success: false, data: "No Band found with the ID: " + id });
   }
 
   const modifiedBands = band.map(band => ({
