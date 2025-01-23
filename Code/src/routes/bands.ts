@@ -19,7 +19,12 @@ router.get("/", async (_req, res) => {
     res.status(404).json({ success: false, data: "No Bands found! :(" });
   }
 
-  res.json({ success: true, data: bands });
+  const modifiedBands = bands.map(band => ({
+    ...band,
+    active: band.dissolutionDate === null,
+  }));
+
+  res.json({ success: true, data: modifiedBands });
 });
 
 router.get("/:id", async (_req, res) => {
@@ -42,7 +47,12 @@ router.get("/:id", async (_req, res) => {
     res.status(404).json({ success: false, data: "No Band found with the ID: " + id });
   }
 
-  res.json({ success: true, data: band });
+  const modifiedBands = band.map(band => ({
+    ...band,
+    active: band.dissolutionDate === null,
+  }));
+
+  res.json({ success: true, data: modifiedBands });
 });
 
 export default router;
