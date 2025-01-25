@@ -3,14 +3,15 @@
   "module": "./Code/src/index.ts",
   "type": "module",
   "scripts": {
+    "build": "bun build ./Code/src/index.ts --outdir ./public",
     "check:types": "tsc --noEmit",
+    "database:setup": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky",
-    "start": "bun --hot run ./Code/src/index.ts",
-    "database:setup": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma"
+    "start": "bun --hot run ./Code/src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
