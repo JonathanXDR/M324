@@ -1,12 +1,11 @@
-import type { Linter } from "eslint";
-import neostandard from "neostandard";
+import type { Linter } from 'eslint'
+import neostandard from 'neostandard'
 
 const config: Linter.Config[] = [
   ...neostandard({
-    noStyle: true,
     ts: true,
-    globals: ["NodeJS"],
+    globals: ['NodeJS'],
   }),
-];
+]
 
-export default config;
+export default config

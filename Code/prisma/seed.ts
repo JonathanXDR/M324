@@ -48,7 +48,7 @@ async function main () {
     },
   })
 
-    await prisma.band.create({
+  await prisma.band.create({
     data: {
       name: 'Miles Davis Quintet',
       genreId: jazz.id,

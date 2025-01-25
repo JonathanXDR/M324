@@ -22,7 +22,7 @@ router.get('/', async (_req, res) => {
     res.status(404).json({ success: false, data: 'No Bands found! :(' })
   }
 
-  const modifiedBands = bands.map(band => ({
+  const modifiedBands = bands.map((band) => ({
     ...band,
     active: band.dissolutionDate === null,
   }))
@@ -44,7 +44,7 @@ router.get('/:id', async (_req, res) => {
       .json({ success: false, data: 'No Band found with the ID: ' + id })
   }
 
-  const modifiedBands = band.map(band => ({
+  const modifiedBands = band.map((band) => ({
     ...band,
     active: band.dissolutionDate === null,
   }))
