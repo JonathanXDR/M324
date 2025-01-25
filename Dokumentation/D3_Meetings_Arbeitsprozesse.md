@@ -41,11 +41,27 @@
 
 ---
 
-#### 02.12.2024
+#### 05.12.2024
+
+**Daily Meeting:**
+
+- T3 schätzen und erledigen
+
+- **Positives:**
+  - T1 gut abgeschlossen.
+  - Bereits mit T4 begonnen
+- **Verbesserungen:**
+  - Link zu Theorieinhalte fehlen
+  - T2 Antworten überarbeiten
 
 ---
 
 #### 12.12.2024
+
+**Daily Meeting:**
+
+- T4 fertigstellen
+- T5 schätzen und beginnen
 
 **Retrospective:**
 
@@ -94,9 +110,9 @@
 **Retrospective:**
 
 - **Positives:**
-  - _Noch offen._
+  - Alles nötige für P2 vorbereitet (Schätzung, Tasks usw.).
 - **Verbesserungen:**
-  - _Noch offen._
+- Setup vom Projekt dauerte länger als geplant.
 
 ---
 
@@ -116,24 +132,60 @@
 - **Verbesserungen:**
   - Scrum Master war abwesend; Diskussion über Wechsel des Scrum Masters.
 
-## Arbeitsprozesse
+---
 
-### Commit Messages
+#### 23.01.2025
 
-Damit die Commit Messages einheitlich und aussagekräftig sind, verwenden wir [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Die Commit Messages folgen dem Schema:
+**Daily Meeting:**
 
-```
-<type>[optional scope]: <description>
-```
+- Weiterarbeit an P2 (kontinuierliches Arbeiten).
+- Beginn mit P3
 
-Beispiel:
+**Retrospective:**
 
-```
-feat: add new feature
-fix: correct minor typo
-docs: update README.md
-```
+- **Positives:**
+  - Produktives Arbeiten.
+- **Verbesserungen:**
+  - D3 Meeting Doku nicht komplett, fehlende Inhalte ergänzen.
 
-Damit dieses Konventionen auch eingehalten werden, wird vor jedem Git Commit ein Git Hook ausgeführt, der die Commit Message überprüft.
+## Scrum
 
-### Code Qualität
+// TODO: Scrum-Prozess
+// TODO: Scrum-Rollen
+// TODO: Sprint-Planung/Daily Meetings
+// TODO: Sprint-Retrospektive
+// TODO: Task-Management (Kanban-Board, GitHub Projects)
+// TODO: Definition of Done (Optional)
+// TODO: Definition of Ready (Optional)
+
+## Commit Messages
+
+// TODO: Conventional Commits
+// TODO: Commit Message Format (z. B. `feat: Implement user authentication`)
+// TODO: Git Hooks
+
+## Code Qualität
+
+// TOOD: Typisierung (TypeScript, Git Hooks)
+// TODO: Linting (ESLint, Prettier, Git Hooks)
+// TODO: Code Reviews (at least 2 Approvals)
+// TODO: Testing (Unit Tests, Integration Tests, E2E Tests)
+
+## Secrets
+
+// TOOD: Secrets Management (GitHub Secrets, CI/CD, .env-Datei)
+// TODO: .env-Datei im .gitignore
+
+## Datenbank
+
+// TODO: Datenbank-Modellierung (ERD)
+// TODO: Datenbank-Struktur (Prisma, MariaDB)
+// TODO: Datenbank-Deployment (Docker, Amazon RDS)
+// TODO: Datenbank-Backups
+// TODO: Datenbank-Migrationen (Prisma Migrations)
+// TODO: Datenbank-Seedings
+
+## API
+
+// TODO: API-Design (RESTful API)
+// TODO: API-Dokumentation (Swagger, Postman)

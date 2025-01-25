@@ -1,4 +1,4 @@
-![DB-Schema](./images/diagram-export-19.12.2024-14_34_46.png)
+![DB-Schema](./assets/img/diagram-export-19.12.2024-14_34_46.png)
 _Band_:
 
 - ID (Automatically Generated)
