@@ -2,80 +2,80 @@
  This file was created by ChatGPT
 */
 
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
-async function main() {
+async function main () {
   const rock = await prisma.genre.create({
-    data: { name: "Rock" },
-  });
+    data: { name: 'Rock' },
+  })
 
   const jazz = await prisma.genre.create({
-    data: { name: "Jazz" },
-  });
+    data: { name: 'Jazz' },
+  })
 
   const sony = await prisma.label.create({
-    data: { name: "Sony Music" },
-  });
+    data: { name: 'Sony Music' },
+  })
 
   const universal = await prisma.label.create({
-    data: { name: "Universal Music" },
-  });
+    data: { name: 'Universal Music' },
+  })
 
-  const beatles = await prisma.band.create({
+  await prisma.band.create({
     data: {
-      name: "The Beatles",
+      name: 'The Beatles',
       genreId: rock.id,
-      foundingDate: new Date("1960-01-01"),
+      foundingDate: new Date('1960-01-01'),
       members: 4,
       albums: {
         create: [
           {
-            title: "Abbey Road",
+            title: 'Abbey Road',
             price: 20,
             labelId: sony.id,
-            releaseDate: new Date("1969-09-26"),
+            releaseDate: new Date('1969-09-26'),
           },
           {
-            title: "Let It Be",
+            title: 'Let It Be',
             price: 25,
             labelId: universal.id,
-            releaseDate: new Date("1970-05-08"),
+            releaseDate: new Date('1970-05-08'),
           },
         ],
       },
     },
-  });
+  })
 
-  const milesDavis = await prisma.band.create({
+    await prisma.band.create({
     data: {
-      name: "Miles Davis Quintet",
+      name: 'Miles Davis Quintet',
       genreId: jazz.id,
-      foundingDate: new Date("1955-01-01"),
-      dissolutionDate: new Date("1969-01-01"),
+      foundingDate: new Date('1955-01-01'),
+      dissolutionDate: new Date('1969-01-01'),
       members: 5,
       albums: {
         create: [
           {
-            title: "Kind of Blue",
+            title: 'Kind of Blue',
             price: 30,
             labelId: sony.id,
-            releaseDate: new Date("1969-01-01"),
+            releaseDate: new Date('1969-01-01'),
           },
         ],
       },
     },
-  });
+  })
 
-  console.log("Seeded data successfully!");
+  console.log('Seeded data successfully!')
 }
 
 main()
   .catch((e) => {
-    console.error(e);
-    process.exit(1);
+    console.error(e)
+    process.exit(1)
   })
   .finally(async () => {
-    await prisma.$disconnect();
-  });
+    await prisma.$disconnect()
+  })

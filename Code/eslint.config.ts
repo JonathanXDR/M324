@@ -1,10 +1,12 @@
-import pluginJs from "@eslint/js";
 import type { Linter } from "eslint";
-import globals from "globals";
+import neostandard from "neostandard";
 
 const config: Linter.Config[] = [
-  { languageOptions: { globals: globals.node } },
-  pluginJs.configs.recommended,
+  ...neostandard({
+    noStyle: true,
+    ts: true,
+    globals: ['NodeJS'],
+  }),
 ];
 
 export default config;
