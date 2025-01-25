@@ -1,6 +1,6 @@
 {
   "name": "m324-music-platform",
-  "module": "src/index.ts",
+  "module": "./Code/src/index.ts",
   "type": "module",
   "scripts": {
     "check:types": "tsc --noEmit",
