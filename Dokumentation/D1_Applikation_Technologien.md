@@ -1,6 +1,6 @@
 # Applikation Technologien
 
-## Programmiersprachen
+## Technologien und Frameworks
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Express.js](https://expressjs.com/)
@@ -8,14 +8,23 @@
 
 ### Begründung
 
-Basierend auf JavaScript, verwenden wir TypeScript damit uns weniger Fehler während dem Programmieren unterlaufen und diese auch nicht erst während der Laufzeit erkannt werden. Für ExpressJS hingegen haben wir uns entschieden, da es relativ einfach ist und alle im Team damit vertraut sind. Zusätzlich setzen wir auf Bun, eine JavaScript Runtime, die die direkte Ausführung von TypeScript Code möglich macht, ohne zusätzliche Dependencies installieren zu müssen, wie das bei Node.js der Fall wäre.
+Basierend auf JavaScript, verwenden wir TypeScript, damit uns weniger Fehler während dem Programmieren unterlaufen und diese auch nicht erst während der Laufzeit erkannt werden. Für Express.js hingegen haben wir uns entschieden, da es relativ einfach ist und alle im Team damit vertraut sind. Zusätzlich setzen wir auf Bun, eine JavaScript Runtime, die die direkte Ausführung von TypeScript Code möglich macht, ohne zusätzliche Dependencies installieren zu müssen, wie das bei Node.js der Fall wäre.
 
 ## Datenbank
 
-- [Prisma](https://www.prisma.io/)
 - [MariaDB](https://mariadb.org/)
+- [Prisma](https://www.prisma.io/)
+- [Docker](https://www.docker.com/)
 - [Amazon RDS](https://aws.amazon.com/de/rds/)
 
 ### Begründung
 
-Wir sind alle mit MariaDB vertraut und beherrschen SQL. Mit AWS können ebenfalls alle umgehen und wir verwenden den Service, um unsere Datenbank zu hosten. Als ORM verwenden wir Prisma, da ORMs den Vorteil bieten, keine direkten SQL-Abfragen schreiben zu müssen.
+Als Datenbank haben wir uns für MariaDB entschieden, da es eine Open-Source-Alternative zu MySQL ist und wir bereits Erfahrung damit haben. Als ORM verwenden wir Prisma. Es bietet den Vorteil, keine direkten SQL-Abfragen schreiben zu müssen und generiert automatisch die nötigen Typen für TypeScript, was wiederum die Fehleranfälligkeit reduziert. Damit wir untereinander keine Konflikte bekommen, wenn sich das Datebankschema ändern sollte, setzen wir auf Docker, um die Datenbank lokal in einem Container zu betreiben. Für die Produktion haben wir uns für Amazon RDS entschieden, da es eine einfache Möglichkeit bietet, MariaDB in der Cloud zu betreiben. Zusätzlich haben alle schon einmal mit AWS gearbeitet.
+
+## Deployment
+
+- [Vercel](https://vercel.com/)
+
+### Begründung
+
+Vercel ist ein Deployment-Service, der sich auf Serverless-Technologien spezialisiert hat. Da wir unsere Applikation serverlos hosten wollen, haben wir uns für Vercel entschieden. Zudem bietet Vercel eine einfache Integration mit GitHub, was uns das Deployment erleichtert.
