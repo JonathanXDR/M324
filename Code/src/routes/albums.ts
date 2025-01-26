@@ -7,9 +7,6 @@ import prisma from "../db/prisma";
 const router = Router();
 import axios from 'axios';
 
-router.get("/", (req, res) => {
-  res.json({ message: "list of albums!" });
-});
 
 router.post("/", async (req: Request, res: Response) => {
   const data = req.body;
@@ -21,10 +18,18 @@ router.post("/", async (req: Request, res: Response) => {
   }
 
   /* Release Date */
+  if (!data.releaseDate || data.releaseDate.length === 0)
+    return res.status(400).send("Release date is required");
   const releaseDate = new Date(data.releaseDate);
+  if (isNaN(releaseDate.getTime())) {
+    return res.status(400).send("Invalid release date");
+  }
 
   /* Band */
   const band: string = data.band;
+  if (!band || band.length === 0) {
+    return res.status(400).send("Band is required");
+  }
   const appBaseUrl = `${req.protocol}://${req.get('host')}`;
   const response = await axios.get(`${appBaseUrl}/bands`);
   const bands: Array<Band> = response.data.data;
@@ -34,6 +39,13 @@ router.post("/", async (req: Request, res: Response) => {
   }
 
   /* Price */
+  const priceString = data.price;
+  if (!priceString || priceString.length === 0) {
+    return res.status(400).send("Price is required");
+  }
+  if (typeof priceString !== "number" || isNaN(priceString)) {
+    return res.status(400).send("Price must be a valid number");
+  }
   const price: number = data.price;
   if (price < 0) {
     return res.status(400).send("Price must be positive");
@@ -41,6 +53,9 @@ router.post("/", async (req: Request, res: Response) => {
 
   /* Label */
   const label = data.label;
+  if (!label || label.length === 0) {
+    return res.status(400).send("Label is required");
+  }
   const dbLabel = await prisma.label.findFirst({
     where: {
       name: label,
