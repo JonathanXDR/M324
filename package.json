@@ -1,12 +1,16 @@
 {
   "name": "m324-music-platform",
-  "module": "src/index.ts",
+  "module": "./Code/src/index.ts",
   "type": "module",
   "scripts": {
+    "check:types": "tsc --noEmit",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky",
-    "start": "bun --hot run src/index.ts"
+    "start": "bun --hot run ./Code/src/index.ts",
+    "database:setup": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
@@ -17,9 +21,13 @@
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "@types/bun": "latest",
+    "@eslint/js": "^9.19.0",
+    "@types/bun": "1.2.0",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
+    "lint-staged": "^15.4.2",
+    "neostandard": "^0.12.0",
     "prettier": "^3.4.2",
     "prisma": "6.2.1"
   },
@@ -27,6 +35,6 @@
     "typescript": "^5.7.3"
   },
   "prisma": {
-    "seed": "bun prisma/seed.ts"
+    "seed": "bun ./Code/prisma/seed.ts"
   }
 }
