@@ -18,8 +18,9 @@ router.post("/", async (req: Request, res: Response) => {
   }
 
   /* Release Date */
-  if (!data.releaseDate || data.releaseDate.length === 0)
+  if (!data.releaseDate || data.releaseDate.length === 0) {
     return res.status(400).send("Release date is required");
+  }
   const releaseDate = new Date(data.releaseDate);
   if (isNaN(releaseDate.getTime())) {
     return res.status(400).send("Invalid release date");
