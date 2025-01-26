@@ -58,6 +58,10 @@ router.post('/', async (_req, res) => {
     _req.body
 
   const post = await prisma.band.create({
+    include: {
+      albums: true,
+      genre: true
+    },
     data: {
       foundingDate,
       members,
