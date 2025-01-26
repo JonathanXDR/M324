@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { type Request, type Response } from 'express'
 import albumRoute from './routes/albums'
 import bandRoute from './routes/bands'
 
@@ -9,7 +9,7 @@ app.use(express.json())
 app.use('/bands', bandRoute)
 app.use('/albums', albumRoute)
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!')
 })
 
