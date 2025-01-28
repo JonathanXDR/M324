@@ -1,6 +1,6 @@
+import type { Album } from '@prisma/client'
 import { Router } from 'express'
 import prisma from '../db/prisma'
-import type { Album } from '@prisma/client'
 
 const router = Router()
 
@@ -42,7 +42,7 @@ router.get('/:id', async (_req, res) => {
   if (!band || band.length === 0) {
     res
       .status(400)
-      .json({ success: false, data: 'No Band found with the ID: ' + id })
+      .json({ success: false, data: `Band with id ${id} not found` })
   }
 
   const modifiedBands = band.map((band) => ({
@@ -55,15 +55,8 @@ router.get('/:id', async (_req, res) => {
 
 router.post('/', async (_req, res) => {
   try {
-    const {
-      name,
-      genre,
-      foundingDate,
-      members,
-      dissolutionDate,
-      genreId,
-      albums,
-    } = _req.body
+    const { name, foundingDate, members, dissolutionDate, genreId, albums } =
+      _req.body
 
     if (!name || name.length === 0) {
       res.status(400).send('Name is required')
@@ -112,7 +105,7 @@ router.post('/', async (_req, res) => {
     })
     res.json({
       success: true,
-      message: 'Band ' + name + ' created successfully',
+      message: `Band ${name} created successfully`,
       data: post,
     })
   } catch (e: any) {
