@@ -1,8 +1,14 @@
 # [Meetings / Arbeitsprozesse](https://gitlab.com/ch-tbz-it/Stud/m324/-/blob/main/Projekt/D3_Meetings_Prozesse.md)
 
-## Meetings
+## Scrum-Prozess
 
-### Rollen
+### Rollen und Verantwortlichkeiten
+
+In unserem Projektteam haben wir verschiedene Scrum-Rollen definiert, die jeweils mit spezifischen Verantwortlichkeiten verbunden sind. Als Scrum Master fungiert Zakria Samma, der für die erfolgreiche Implementierung und Aufrechterhaltung der Scrum-Praktiken verantwortlich ist. In dieser Rolle unterstützt er das Team dabei, effizient zu arbeiten, beseitigt auftretende Hindernisse und stellt sicher, dass die Scrum-Prinzipien korrekt angewendet werden.
+
+Jonathan Russ übernimmt die Rolle des Product Owners. In dieser Position vertritt er die Interessen der Stakeholder und Endnutzer. Er ist verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um sicherzustellen, dass wertvolle Ergebnisse erzielt werden.
+
+Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert wesentliche Anforderungen, Feedback und Entscheidungen für das Projekt. Das Entwicklungsteam besteht aus Jonathan Russ, Pascal Rieder, Jon Landa und Kalel Jong. Sie setzen die Anforderungen um, führen Tests durch und liefern funktionale Produktinkremente gemäss den Vorgaben des Product Owners.
 
 | Rolle             | Beschreibung                                                                                                                                                                                                          | Name                                                |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
@@ -11,11 +17,19 @@
 | **Stakeholder**   | Liefert Anforderungen, Feedback und wichtige Entscheidungen.                                                                                                                                                          | Thanam Pangri                                       |
 | **Developer**     | Teammitglieder, die Anforderungen umsetzen, testen und funktionierende Produktinkremente gemäss den Vorgaben des Product Owners liefern.                                                                              | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong |
 
+### Sprint-Planung und Weekly Meetings
+
+Unser Entwicklungsprozess basiert auf wöchentlichen Sprints, die einen überschaubaren Zeitrahmen für die Umsetzung definierter Ziele bieten. Die Weekly Meetings finden einmal pro Woche (während des Unterrichts) am anfang des Sprints statt und sind daher auch gleichzeitig die Sprint-Planning Meetings. In diesen Meetings besprechen wir drei wesentliche Aspekte: Zunächst erfolgt eine Überprüfung der in der vorherigen Woche abgeschlossenen Aufgaben, die vom Stakeholder validiert werden. Anschliessend planen wir die anstehenden Aufgaben und User Stories für die aktuelle Woche bzw. Sprint. Abschliessend werfen wir einen kurzen Blick auf die Erkenntnisse aus der letzten Retrospektive, um sicherzustellen, dass wir die vereinbarten Verbesserungsmassnahmen umsetzen.
+
+### Sprint-Retrospektive
+
+Die Sprint-Retrospektive ist ein wesentlicher Bestandteil unseres kontinuierlichen Verbesserungsprozesses. Sie findet wöchentlich am Ende des Unterrichtstages, üblicherweise donnerstags von 16:15 bis 16:30 Uhr, statt. In dieser Zeit reflektiert das Team gemeinsam über die vergangene Woche und identifiziert Verbesserungspotenziale für den nächsten Sprint. Die gesammelten Erkenntnisse werden dokumentiert und in konkrete Massnahmen umgesetzt. Durch diesen regelmässigen Prozess stellen wir sicher, dass wir uns als Team kontinuierlich weiterentwickeln und unsere Arbeitsweise optimieren.
+
 ### Meeting-Typen
 
-#### Daily Meetings
+#### Weekly Meetings
 
-- Finden wöchentlich mitten im Sprint statt.
+- Finden wöchentlich am Anfang des Sprints statt.
 - Themen:
   - Besprechung der am Vortag gelösten Aufgaben (vom Stakeholder kontrolliert und reflektiert).
   - Planung der täglichen Aufgaben und User Stories.
@@ -30,143 +44,7 @@
 
 ### Meeting-Protokolle
 
-#### 21.11.2024
-
-**Daily Meeting:**
-
-- User Stories für alle Aufgaben erstellen.
-- Subtasks zu User Stories erfassen und zuordnen.
-- Planung/Meeting-Struktur definieren.
-- KVP für den Unterrichtstag planen.
-
----
-
-#### 05.12.2024
-
-**Daily Meeting:**
-
-- T3 schätzen und erledigen
-
-- **Positives:**
-  - T1 gut abgeschlossen.
-  - Bereits mit T4 begonnen
-- **Verbesserungen:**
-  - Link zu Theorieinhalte fehlen
-  - T2 Antworten überarbeiten
-
----
-
-#### 12.12.2024
-
-**Daily Meeting:**
-
-- T4 fertigstellen
-- T5 schätzen und beginnen
-
-**Retrospective:**
-
-- **Positives:**
-  - Konstruktive Kritik am Stakeholder führte zu einer Notenverbesserung um 0.2.
-  - D2 wurde schneller als geplant abgeschlossen; Aufgaben-Grösse wurde falsch eingeschätzt.
-- **Verbesserungen:**
-  - Conventional Commits einführen, um die zugehörigen User Stories besser zu identifizieren.
-  - Neue User Story IDs (z. B. `T5-1`).
-
----
-
-#### 19.12.2024
-
-**Daily Meeting:**
-
-- Definition von Conventional Commits.
-- T5 fertigstellen.
-- D2 anpassen.
-- Lernjournal (D5) regelmässig erfassen und pushen.
-- User Stories erstellen.
-- Anpassung der User Story IDs (z. B. `User Story: Band erfassen`).
-
-**Retrospective:**
-
-- **Positives:**
-  - Erstes Review erfolgreich durchgeführt.
-  - Viele User Stories und Tasks auf dem Kanban erstellt.
-  - Fokus auf Programmieren bei T5.
-- **Verbesserungen:**
-  - Mehr Zeit für Conventional Commits.
-  - Neue User Story IDs definieren.
-  - Tasks für Rollenberechtigungen erstellen.
-  - User Stories und Tasks für P3, P4, Z3 erstellen.
-  - Ablenkungen im Team reduzieren.
-
----
-
-#### 09.01.2025
-
-**Daily Meeting:**
-
-- Alle verbleibenden Tasks von P2 schätzen.
-- Beginn mit P2.
-
-**Retrospective:**
-
-- **Positives:**
-  - Alles nötige für P2 vorbereitet (Schätzung, Tasks usw.).
-- **Verbesserungen:**
-- Setup vom Projekt dauerte länger als geplant.
-
----
-
-#### 16.01.2025
-
-**Daily Meeting:**
-
-- Weiterarbeit an P2 (kontinuierliches Arbeiten).
-
-**Retrospective:**
-
-- **Positives:**
-  - Branching-Strategie eingehalten.
-  - Commit-Strategie eingehalten.
-  - T5-Review verlief gut.
-  - Produktives Arbeiten.
-- **Verbesserungen:**
-  - Scrum Master war abwesend; Diskussion über Wechsel des Scrum Masters.
-
----
-
-#### 23.01.2025
-
-**Daily Meeting:**
-
-- Weiterarbeit an P2 (kontinuierliches Arbeiten).
-- Beginn mit P3
-
-**Retrospective:**
-
-- **Positives:**
-  - Produktives Arbeiten.
-- **Verbesserungen:**
-  - D3 Meeting Doku nicht komplett, fehlende Inhalte ergänzen.
-
-# Meetings und Arbeitsprozesse
-
-## Scrum-Prozess
-
-### Rollen und Verantwortlichkeiten
-
-In unserem Projektteam haben wir verschiedene Scrum-Rollen definiert, die jeweils mit spezifischen Verantwortlichkeiten verbunden sind. Als Scrum Master fungiert Zakria Samma, der für die erfolgreiche Implementierung und Aufrechterhaltung der Scrum-Praktiken verantwortlich ist. In dieser Rolle unterstützt er das Team dabei, effizient zu arbeiten, beseitigt auftretende Hindernisse und stellt sicher, dass die Scrum-Prinzipien korrekt angewendet werden.
-
-Zakria Samma übernimmt zusätzlich die Rolle des Product Owners. In dieser Position vertritt er die Interessen der Stakeholder und Endnutzer. Er ist verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um sicherzustellen, dass wertvolle Ergebnisse erzielt werden.
-
-Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert wesentliche Anforderungen, Feedback und Entscheidungen für das Projekt. Das Entwicklungsteam besteht aus Jonathan Russ, Pascal Rieder, Jon Landa und Kalel Jong. Sie setzen die Anforderungen um, führen Tests durch und liefern funktionale Produktinkremente gemäss den Vorgaben des Product Owners.
-
-### Sprint-Planung und Weekly Meetings
-
-Unser Entwicklungsprozess basiert auf wöchentlichen Sprints, die einen überschaubaren Zeitrahmen für die Umsetzung definierter Ziele bieten. Die Weekly Meetings finden einmal pro Woche (während des Unterrichts) am anfang des Sprints statt und sind daher auch gleichzeitig die Sprint-Planning Meetings. In diesen Meetings besprechen wir drei wesentliche Aspekte: Zunächst erfolgt eine Überprüfung der in der vorherigen Woche abgeschlossenen Aufgaben, die vom Stakeholder validiert werden. Anschliessend planen wir die anstehenden Aufgaben und User Stories für die aktuelle Woche bzw. Sprint. Abschliessend werfen wir einen kurzen Blick auf die Erkenntnisse aus der letzten Retrospektive, um sicherzustellen, dass wir die vereinbarten Verbesserungsmassnahmen umsetzen.
-
-### Sprint-Retrospektive
-
-Die Sprint-Retrospektive ist ein wesentlicher Bestandteil unseres kontinuierlichen Verbesserungsprozesses. Sie findet wöchentlich am Ende des Unterrichtstages, üblicherweise donnerstags von 16:15 bis 16:30 Uhr, statt. In dieser Zeit reflektiert das Team gemeinsam über die vergangene Woche und identifiziert Verbesserungspotenziale für den nächsten Sprint. Die gesammelten Erkenntnisse werden dokumentiert und in konkrete Massnahmen umgesetzt. Durch diesen regelmässigen Prozess stellen wir sicher, dass wir uns als Team kontinuierlich weiterentwickeln und unsere Arbeitsweise optimieren.
+Die Meeting-Protokolle können [hier](../Dokumentation/D3_Meeting_Protokolle.md) eingesehen werden. Sie enthalten eine Zusammenfassung der besprochenen Themen, der erzielten Ergebnisse und der vereinbarten Massnahmen.
 
 ## Aufgabenverwaltung
 
