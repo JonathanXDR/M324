@@ -1,6 +1,12 @@
 # [Meetings / Arbeitsprozesse](https://gitlab.com/ch-tbz-it/Stud/m324/-/blob/main/Projekt/D3_Meetings_Prozesse.md)
 
-## Scrum-Prozess
+## Scrum-Prozesse
+
+### Working Agreement
+
+Das Working Agreement definiert die Regeln und Standards, die für die Zusammenarbeit im Projektteam gelten. Es umfasst die Definition von Ready und Done für User Stories. Die Definition von Ready stellt sicher, dass die Anforderungen klar und verständlich sind, während die Definition von Done sicherstellt, dass die Anforderungen vollständig erfüllt sind und die Qualität gewährleistet ist.
+
+Das Working Agreement kann [hier](../Dokumentation/D3_Working_Agreement.md) eingesehen werden.
 
 ### Rollen und Verantwortlichkeiten
 
@@ -10,6 +16,8 @@ Jonathan Russ übernimmt die Rolle des Product Owners. In dieser Position vertri
 
 Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert wesentliche Anforderungen, Feedback und Entscheidungen für das Projekt. Das Entwicklungsteam besteht aus Jonathan Russ, Pascal Rieder, Jon Landa und Kalel Jong. Sie setzen die Anforderungen um, führen Tests durch und liefern funktionale Produktinkremente gemäss den Vorgaben des Product Owners.
 
+#### Rollenübersicht
+
 | Rolle             | Beschreibung                                                                                                                                                                                                          | Name                                                |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | **Scrum Master**  | Verantwortlich für die Implementierung und Einhaltung des Scrum-Prozesses. Unterstützt das Team dabei, effektiv zu arbeiten, beseitigt Hindernisse und stellt sicher, dass Scrum-Praktiken korrekt angewendet werden. | Zakria Samma                                        |
@@ -17,32 +25,24 @@ Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert w
 | **Stakeholder**   | Liefert Anforderungen, Feedback und wichtige Entscheidungen.                                                                                                                                                          | Thanam Pangri                                       |
 | **Developer**     | Teammitglieder, die Anforderungen umsetzen, testen und funktionierende Produktinkremente gemäss den Vorgaben des Product Owners liefern.                                                                              | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong |
 
-### Sprint-Planung und Weekly Meetings
+### Meetings
 
-Unser Entwicklungsprozess basiert auf wöchentlichen Sprints, die einen überschaubaren Zeitrahmen für die Umsetzung definierter Ziele bieten. Die Weekly Meetings finden einmal pro Woche (während des Unterrichts) am anfang des Sprints statt und sind daher auch gleichzeitig die Sprint-Planning Meetings. In diesen Meetings besprechen wir drei wesentliche Aspekte: Zunächst erfolgt eine Überprüfung der in der vorherigen Woche abgeschlossenen Aufgaben, die vom Stakeholder validiert werden. Anschliessend planen wir die anstehenden Aufgaben und User Stories für die aktuelle Woche bzw. Sprint. Abschliessend werfen wir einen kurzen Blick auf die Erkenntnisse aus der letzten Retrospektive, um sicherzustellen, dass wir die vereinbarten Verbesserungsmassnahmen umsetzen.
+#### Sprint-Planung und Weekly Meetings
 
-### Sprint-Retrospektive
+Unser Entwicklungsprozess basiert auf wöchentlichen Sprints, die einen überschaubaren Zeitrahmen für die Umsetzung definierter Ziele bieten. Die Weekly Meetings finden einmal pro Woche (während des Unterrichts) am anfang des Sprints statt und sind daher auch gleichzeitig die Sprint Planning Meetings. In diesen Meetings besprechen wir drei wesentliche Aspekte: Zunächst erfolgt eine Überprüfung der in der vorherigen Woche abgeschlossenen Aufgaben, die vom Stakeholder validiert werden. Anschliessend planen wir die anstehenden Aufgaben und User Stories für die aktuelle Woche bzw. Sprint. Abschliessend werfen wir einen kurzen Blick auf die Erkenntnisse aus der letzten Retrospektive, um sicherzustellen, dass wir die vereinbarten Verbesserungsmassnahmen umsetzen.
+
+#### Sprint-Retrospektive
 
 Die Sprint-Retrospektive ist ein wesentlicher Bestandteil unseres kontinuierlichen Verbesserungsprozesses. Sie findet wöchentlich am Ende des Unterrichtstages, üblicherweise donnerstags von 16:15 bis 16:30 Uhr, statt. In dieser Zeit reflektiert das Team gemeinsam über die vergangene Woche und identifiziert Verbesserungspotenziale für den nächsten Sprint. Die gesammelten Erkenntnisse werden dokumentiert und in konkrete Massnahmen umgesetzt. Durch diesen regelmässigen Prozess stellen wir sicher, dass wir uns als Team kontinuierlich weiterentwickeln und unsere Arbeitsweise optimieren.
 
-### Meeting-Typen
+#### Übersicht
 
-#### Weekly Meetings
+| Meeting-Typ                          | Zeitpunkt                                                   | Inhalt                                                                                                             | Ziel                                                                  |
+| ------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| **Weekly Meeting (Sprint Planning)** | Wöchentlich zum Start des Sprints (Donnerstags 14:00-14:30) | - Austausch über Fortschritt<br>- Planung und Schätzung nächster Aufgaben<br>- Reflexion der letzten Retrospektive | Team auf gleichem Informationsstand halten und Blocker identifizieren |
+| **Retrospektive (KVP)**              | Wöchentlich zum Ende des Sprints (Donnerstags 16:15-16:30)  | - Reflexion der vergangenen Woche<br>- Konstruktive Verbesserungsvorschläge                                        | Kontinuierliche Verbesserung der Prozesse und Zusammenarbeit          |
 
-- Finden wöchentlich am Anfang des Sprints statt.
-- Themen:
-  - Besprechung der am Vortag gelösten Aufgaben (vom Stakeholder kontrolliert und reflektiert).
-  - Planung der täglichen Aufgaben und User Stories.
-  - Kurzes Update zur gestrigen Retrospektive.
-
-#### Retrospective (KVP)
-
-- Wöchentliche Meetings am Ende des Sprints (Donnerstags ca. 16:15 - 16:30).
-- Themen:
-  - Reflexion der Woche.
-  - Verbesserungsvorschläge für die nächste Woche.
-
-### Meeting-Protokolle
+#### Meeting-Protokolle
 
 Die Meeting-Protokolle können [hier](../Dokumentation/D3_Meeting_Protokolle.md) eingesehen werden. Sie enthalten eine Zusammenfassung der besprochenen Themen, der erzielten Ergebnisse und der vereinbarten Massnahmen.
 
@@ -52,34 +52,14 @@ Die Meeting-Protokolle können [hier](../Dokumentation/D3_Meeting_Protokolle.md)
 
 Für die Organisation und Verwaltung unserer Aufgaben nutzen wir GitHub Projects mit einem Kanban-Board. Dieses visuelle System ermöglicht es uns, den Fortschritt unserer Arbeit transparent darzustellen und effektiv zu verwalten. Unser Board ist in mehrere Spalten unterteilt, die den Workflow abbilden:
 
-1. **Backlog**
-
-   - Noch nicht gestartete Items
-   - Grössere Epics/User Stories oder Ideen, die später umgesetzt werden
-
-2. **Ready**
-
-   - Aufgaben, die zur Bearbeitung freigegeben sind
-   - Klare Anforderung und geschätzter Umfang
-
-3. **In Progress**
-
-   - Aufgaben, an denen gerade gearbeitet wird
-   - Typischerweise wird hier auch ein PR eröffnet
-
-4. **Review**
-
-   - Fertig implementierte Items, die auf Code-Review warten
-   - Möglicherweise offener Pull Request
-
-5. **Rework**
-
-   - Items, die nach dem Review überarbeitet werden müssen
-   - Fehler, Verbesserungen oder zusätzliche Anforderungen
-
-6. **Done**
-   - Abgeschlossene und abgenommene Aufgaben
-   - Code ist gemergt und Tests sind erfolgreich
+| Spalte          | Beschreibung                                            | Details                                                             |
+| --------------- | ------------------------------------------------------- | ------------------------------------------------------------------- |
+| **Backlog**     | Noch nicht gestartete Items                             | Grössere Epics/User Stories oder Ideen, die später umgesetzt werden |
+| **Ready**       | Aufgaben, die zur Bearbeitung freigegeben sind          | Klare Anforderung und geschätzter Umfang                            |
+| **In Progress** | Aufgaben, an denen gerade gearbeitet wird               | Typischerweise wird hier auch ein PR eröffnet                       |
+| **Review**      | Fertig implementierte Items, die auf Code-Review warten | Möglicherweise offener Pull Request                                 |
+| **Rework**      | Items, die nach dem Review überarbeitet werden müssen   | Fehler, Verbesserungen oder zusätzliche Anforderungen               |
+| **Done**        | Abgeschlossene und abgenommene Aufgaben                 | Code ist gemergt und Tests sind erfolgreich                         |
 
 ### Strukturierung der Issues
 
