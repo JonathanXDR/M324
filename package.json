@@ -11,9 +11,9 @@
     "prepare": "husky",
     "start": "bun --hot run ./Code/src/index.ts",
     "test": "vitest",
-    "test:unit": "vitest run --config vitest.config.ts --testPathPattern=unit",
-    "test:integration": "vitest run --config vitest.config.ts --testPathPattern=integration",
-    "test:system": "vitest run --config vitest.config.ts --testPathPattern=system",
+    "test:unit": "vitest run --config vitest.config.ts unit",
+    "test:integration": "vitest run --config vitest.config.ts integration",
+    "test:system": "vitest run --config vitest.config.ts system",
     "database:setup": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma"
   },
   "dependencies": {

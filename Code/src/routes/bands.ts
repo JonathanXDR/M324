@@ -21,6 +21,7 @@ router.get('/', async (_req, res) => {
 
   if (!bands || bands.length === 0) {
     res.status(404).json({ success: false, data: 'No Bands found! :(' })
+    return
   }
 
   const modifiedBands = bands.map((band) => ({
@@ -60,7 +61,7 @@ router.post('/', async (_req, res) => {
   const post = await prisma.band.create({
     include: {
       albums: true,
-      genre: true
+      genre: true,
     },
     data: {
       foundingDate,
