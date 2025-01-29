@@ -3,15 +3,20 @@
   "module": "./Code/src/index.ts",
   "type": "module",
   "scripts": {
-    "build": "bun build ./Code/src/index.ts --outdir ./public",
     "check:types": "tsc --noEmit",
-    "database:setup": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma",
+    "dev": "bun --hot run ./Code/src/index.ts",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "migrate:deploy": "prisma migrate deploy --schema ./Code/prisma/schema.prisma",
+    "migrate:dev": "prisma migrate dev --schema ./Code/prisma/schema.prisma",
+    "migrate:reset": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma",
+    "migrate:status": "prisma migrate status --schema ./Code/prisma/schema.prisma",
+    "postinstall": "prisma generate --schema ./Code/prisma/schema.prisma",
     "prepare": "husky",
-    "start": "bun --hot run ./Code/src/index.ts"
+    "start": "bun run ./Code/src/index.ts",
+    "vercel-build": "bun run postinstall && bun run migrate:deploy"
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
