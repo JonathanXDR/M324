@@ -20,7 +20,7 @@ router.get('/', async (_req, res) => {
   })
 
   if (!bands || bands.length === 0) {
-    res.status(404).json({ success: false, data: 'No Bands found! :(' })
+    res.status(400).json({ success: false, data: 'Band is required' })
   }
 
   const modifiedBands = bands.map((band) => ({
@@ -41,8 +41,8 @@ router.get('/:id', async (_req, res) => {
 
   if (!band || band.length === 0) {
     res
-      .status(404)
-      .json({ success: false, data: 'No Band found with the ID: ' + id })
+      .status(400)
+      .json({ success: false, data: `Band with id ${id} not found` })
   }
 
   const modifiedBands = band.map((band) => ({
@@ -54,31 +54,65 @@ router.get('/:id', async (_req, res) => {
 })
 
 router.post('/', async (_req, res) => {
-  const { name, foundingDate, members, dissolutionDate, genreId, albums } =
-    _req.body
+  try {
+    const { name, foundingDate, members, dissolutionDate, genreId, albums } =
+      _req.body
 
-  const post = await prisma.band.create({
-    include: {
-      albums: true,
-      genre: true,
-    },
-    data: {
-      foundingDate,
-      members,
-      dissolutionDate,
-      genreId,
-      albums: {
-        create: albums.map((album: Album) => ({
-          title: album.title,
-          price: album.price,
-          labelId: album.labelId,
-        })),
+    if (!name || name.length === 0) {
+      res.status(400).send('Name is required')
+      return
+    }
+
+    if (!foundingDate || foundingDate.length === 0) {
+      res.status(400).send('Founding date is required')
+      return
+    }
+
+    if (!members || members.length === 0) {
+      res.status(400).send('Member amount is required')
+      return
+    }
+
+    if (
+      !(!dissolutionDate || dissolutionDate === 0) &&
+      dissolutionDate < foundingDate
+    ) {
+      res
+        .status(400)
+        .send('Dissolution date cannot be before the founding date')
+      return
+    }
+
+    const post = await prisma.band.create({
+      include: {
+        albums: true,
+        genre: true,
       },
-      name,
-    },
-  })
-
-  res.json(post)
+      data: {
+        foundingDate: new Date(foundingDate),
+        members,
+        dissolutionDate: dissolutionDate ? new Date(dissolutionDate) : null,
+        genreId,
+        albums: {
+          create: albums.map((album: Album) => ({
+            title: album.title,
+            price: album.price,
+            labelId: album.labelId,
+          })),
+        },
+        name,
+      },
+    })
+    res.json({
+      success: true,
+      message: `Band ${name} created successfully`,
+      data: post,
+    })
+  } catch (e: any) {
+    if (e instanceof Error) {
+      res.status(500).send(e.message)
+    } else res.status(500).send('An error occurred while creating the band')
+  }
 })
 
 export default router
