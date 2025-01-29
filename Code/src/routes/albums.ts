@@ -2,7 +2,7 @@ import type { Band } from '@prisma/client'
 import axios from 'axios'
 import type { Request, Response } from 'express'
 import { Router } from 'express'
-import prisma from '../db/prisma'
+import prisma from '../db/prisma.js'
 
 const router = Router()
 

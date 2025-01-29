@@ -1,6 +1,6 @@
 import type { Album } from '@prisma/client'
 import { Router } from 'express'
-import prisma from '../db/prisma'
+import prisma from '../db/prisma.js'
 
 const router = Router()
 
@@ -60,7 +60,7 @@ router.post('/', async (_req, res) => {
   const post = await prisma.band.create({
     include: {
       albums: true,
-      genre: true
+      genre: true,
     },
     data: {
       foundingDate,
