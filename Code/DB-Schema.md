@@ -1,5 +1,4 @@
-![DB-Schema](./assets/img/diagram-export-19.12.2024-14_34_46.png)
-_Band_:
+![Music Database ERD](./assets/img/Music%20Database%20ERD.png)
 
 - ID (Automatically Generated)
 - Name (String)

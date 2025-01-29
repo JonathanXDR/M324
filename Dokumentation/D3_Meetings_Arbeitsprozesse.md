@@ -61,6 +61,8 @@ Für die Organisation und Verwaltung unserer Aufgaben nutzen wir GitHub Projects
 | **Rework**      | Items, die nach dem Review überarbeitet werden müssen   | Fehler, Verbesserungen oder zusätzliche Anforderungen               |
 | **Done**        | Abgeschlossene und abgenommene Aufgaben                 | Code ist gemergt und Tests sind erfolgreich                         |
 
+![Kanban Board](../Code/assets/img/Kanban%20Board.png)
+
 ### Strukturierung der Issues
 
 Die Verwaltung unserer Aufgaben erfolgt durch ein klar definiertes System von Issues in GitHub. Wir unterscheiden dabei zwischen verschiedenen Hierarchieebenen, die durch spezifische Prefixe gekennzeichnet werden.
@@ -70,6 +72,8 @@ Epics stellen dabei die oberste Ebene dar und werden mit dem Prefix `Epic:` vers
 User Stories, gekennzeichnet durch den Prefix `User Story:`, beschreiben konkrete Anforderungen aus Anwendersicht. Ein Beispiel hierfür ist `User Story: Band erfassen`, das die Funktionalität zur Erfassung einer neuen Band im System beschreibt.
 
 Die kleinsten Einheiten sind Tasks, markiert mit dem Prefix `Task:`, die spezifische Arbeitsaufgaben darstellen, wie etwa `Task: Fehlervalidierung beim erfassen einer Band`.
+
+![Issue Details](../Code/assets/img/Issue%20Details.png)
 
 #### Aufwandsschätzung
 
