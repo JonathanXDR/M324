@@ -1,6 +1,7 @@
 import express, { type Request, type Response } from 'express'
 import albumRoute from './routes/albums.js'
 import bandRoute from './routes/bands.js'
+import { logRequest } from './awsMiddleware.ts'
 
 const app = express()
 const port = process.env.APP_PORT || 3000
@@ -21,9 +22,13 @@ const logGroupName = process.env.AWS_LOG_GROUP_NAME || ''
 
 const logStreamName = process.env.AWS_LOG_STREAM_NAME || ''
 
+app.use(logRequest)
 app.use(express.json())
 app.use('/bands', bandRoute)
 app.use('/albums', albumRoute)
+
+
+
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!')
