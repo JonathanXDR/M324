@@ -63,11 +63,11 @@ Für die Organisation und Verwaltung unserer Aufgaben nutzen wir GitHub Projects
 
 Wenn am Projekt gearbeitet wird, wird das Kanban-Board aktualisiert und die Aufgaben werden in die entsprechenden Spalten verschoben. So behalten wir stets den Überblick über den aktuellen Stand und können Engpässe oder Blockaden frühzeitig erkennen und beheben.
 
-![Kanban Board](../Code/assets/img/Kanban%20Board.png)
+![Kanban Board](./assets/img/Kanban%20Board.png)
 
 Um die Issues noch besser zu strukturieren, haben wir zusätzlich mehrere Tabs erstellt, die die Issues nach verschiedenen Kriterien filtern. Für die Verwaltung aller Issues haben wir beispielsweise den Tab `Table`, der alle Issues nach ihren Parent-Issues gruppiert. Darüber hinaus kann links nach dem aktuellen Status gefiltert werden. So können wir auf einen Blick sehen, welche Aufgaben zu welchen User Stories bzw. Epics gehören und wie der Fortschritt ist.
 
-![Table View](../Code/assets/img/Table%20View.png)
+![Table View](./assets/img/Table%20View.png)
 
 ### Strukturierung der Issues
 
@@ -79,7 +79,7 @@ User Stories, gekennzeichnet durch den Prefix `User Story:`, beschreiben konkret
 
 Die kleinsten Einheiten sind Tasks, markiert mit dem Prefix `Task:`, die spezifische Arbeitsaufgaben darstellen, wie etwa `Task: Fehlervalidierung beim erfassen einer Band`.
 
-![Issue Details](../Code/assets/img/Issue%20Details.png)
+![Issue Details](./assets/img/Issue%20Details.png)
 
 #### Aufwandsschätzung
 
@@ -179,7 +179,7 @@ Für unsere Continuous Delivery nutzen wir Vercel als Cloud-Plattform. Diese ser
 
 Als Entwickler muss man sich daher nur auf den Anwendungscode konzentrieren, während Vercel die gesamte Infrastruktur verwaltet. Anstatt sich also um Container-Management oder Virtualisierung zu kümmern, überträgt man diese Aufgaben, wodurch viele administrative Tätigkeiten entfallen.
 
-![Vercel Functions Overview](../Code/assets/img/Vercel%20Functions%20Overview.png)
+![Vercel Functions Overview](./assets/img/Vercel%20Functions%20Overview.png)
 
 #### Deployment
 
@@ -187,7 +187,7 @@ Unsere Anwendung wird automatisch bei jedem Commit gebaut und deployed. Vercel e
 
 Ein wesentlicher Vorteil dieses Setups ist, dass Vercel dank seiner Serverless-Funktionen die Skalierung selbst übernimmt. Bei hoher Last werden automatisch weitere Instanzen unserer Anwendung bereitgestellt, ohne dass wir manuell eingreifen müssen. Gleichzeitig verlagert Vercel das Routing der Anfragen auf die bereitgestellten Funktionen, was sicherstellt, dass eine Unterbrechung bei Rollouts in der Regel nur minimal ist.
 
-![Vercel Dashboard Preview](../Code/assets/img/Vercel%20Dashboard%20Preview.png)
+![Vercel Dashboard Preview](./assets/img/Vercel%20Dashboard%20Preview.png)
 
 #### Skalierung
 
@@ -205,7 +205,7 @@ Wer noch komplexere Rollout-Szenarien benötigt, kann zum Beispiel Blue-Green- o
 
 In unserer aktuellen Umgebung ist jedoch das eingebaute Rollback ausreichend, um Produktivbetriebsprobleme schnell zu beheben.
 
-![Vercel Instant Rollback](../Code/assets/img/Vercel%20Instant%20Rollback.png)
+![Vercel Instant Rollback](./assets/img/Vercel%20Instant%20Rollback.png)
 
 ### Monitoring
 
