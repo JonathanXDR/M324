@@ -195,7 +195,7 @@ Da das System serverlos läuft, wird horizontal skaliert, wenn mehr Rechenkapazi
 
 Für unsere Anwendung, die auf schnellen Funktionsaufrufen basiert, bietet Vercel daher einen ausreichenden Umfang an Skalierungsmöglichkeiten.
 
-<video height="500px" src="../Code/assets/video/Vercel Automatic Concurrency Scaling.mp4" controls></video>
+<https://github.com/user-attachments/assets/b9995528-3793-471c-840b-f88031ca9c91>
 
 #### Rollback
 
