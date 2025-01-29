@@ -27,4 +27,4 @@ Als Datenbank haben wir uns für MariaDB entschieden, da es eine Open-Source-Alt
 
 ### Begründung
 
-Vercel ist ein Deployment-Service, der sich auf Serverless-Technologien spezialisiert hat. Da wir unsere Applikation serverlos hosten wollen, haben wir uns für Vercel entschieden. Zudem bietet Vercel eine einfache Integration mit GitHub, was uns das Deployment erleichtert.
+Damit unsere Applikation schnell und einfach in der Cloud bereitgestellt werden kann, haben wir uns für Vercel entschieden. Zusätzlich bietet Vercel eine einfache Möglichkeit, die Applikation zu skalieren, falls dies nötig sein sollte.
