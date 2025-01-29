@@ -38,8 +38,36 @@ const logMessage = (message: string) => {
     }
   })
 }
-export const logRequest = (req: Request, res: Response, next: any) => {
-  logMessage('App started')
-  console.log(`Request: ${req.method} ${req.url}`)
+
+export const onRequest = (req: Request, res: Response, next: any) => {
+  const message =
+    `[INFO] [${new Date().toISOString()}] Request received - ` +
+    `Method: ${req.method}, ` +
+    `Endpoint: ${req.originalUrl}, ` +
+    `Client IP: ${req.ip}, ` +
+    `User Agent: ${req.headers['user-agent']}, ` +
+    `Request ID: ${req.headers['x-request-id'] || 'N/A'}, ` +
+    `Body: ${JSON.stringify(req.body)}, ` +
+    `Headers: Authorization: ${req.headers.authorization ? 'Bearer ****' : 'N/A'}, ` +
+    `Content-Type: ${req.headers['content-type']}`
+
+  logMessage(message)
+  next()
+}
+
+export const onResponse = (req: Request, res: Response, next: any) => {
+  const start = Date.now()
+  res.on('finish', () => {
+    const responseTime = Date.now() - start
+    const message =
+      `[INFO] [${new Date().toISOString()}] Response sent - ` +
+      `Status: ${res.statusCode}, ` +
+      `Endpoint: ${req.originalUrl}, ` +
+      `Client IP: ${req.ip}, ` +
+      `Request ID: ${req.headers['x-request-id'] || 'N/A'}, ` +
+      `Response Time: ${responseTime}ms`
+
+    logMessage(message)
+  })
   next()
 }
