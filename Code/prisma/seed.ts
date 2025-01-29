@@ -1,5 +1,5 @@
 /*
- This file was created by ChatGPT
+  This file was created by ChatGPT
 */
 
 import { PrismaClient } from '@prisma/client'

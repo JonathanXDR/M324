@@ -2,8 +2,8 @@ import type { Band } from '@prisma/client'
 import express from 'express'
 import request from 'supertest'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import prisma from '../../src/db/prisma'
-import bandsRouter from '../../src/routes/bands'
+import prisma from '../../src/db/prisma.js'
+import bandsRouter from '../../src/routes/bands.js'
 
 const app = express()
 app.use(express.json())

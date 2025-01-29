@@ -11,8 +11,8 @@ import {
   vi,
   type Mock,
 } from 'vitest'
-import prisma from '../../src/db/prisma'
-import albumsRouter from '../../src/routes/albums'
+import prisma from '../../src/db/prisma.js'
+import albumsRouter from '../../src/routes/albums.js'
 
 const app = express()
 app.use(express.json())

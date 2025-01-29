@@ -1,9 +1,9 @@
 import express, { type Request, type Response } from 'express'
-import albumRoute from './routes/albums'
-import bandRoute from './routes/bands'
+import albumRoute from './routes/albums.js'
+import bandRoute from './routes/bands.js'
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.APP_PORT || 3000
 
 app.use(express.json())
 app.use('/bands', bandRoute)
@@ -14,7 +14,7 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`)
+  console.log(`Server running on port ${port}`)
 })
 
 export default app
