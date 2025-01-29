@@ -39,7 +39,7 @@ const logMessage = (message: string) => {
   })
 }
 
-export const onRequest = (req: Request, res: Response, next: any) => {
+export const logToAwsOnRequest = (req: Request, res: Response, next: any) => {
   const message =
     `[INFO] [${new Date().toISOString()}] Request received - ` +
     `Method: ${req.method}, ` +
@@ -55,7 +55,7 @@ export const onRequest = (req: Request, res: Response, next: any) => {
   next()
 }
 
-export const onResponse = (req: Request, res: Response, next: any) => {
+export const logToAwsOnResponse = (req: Request, res: Response, next: any) => {
   const start = Date.now()
   res.on('finish', () => {
     const responseTime = Date.now() - start

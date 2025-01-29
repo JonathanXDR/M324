@@ -1,14 +1,19 @@
 import express, { type Request, type Response } from 'express'
 import albumRoute from './routes/albums.js'
 import bandRoute from './routes/bands.js'
-import { onRequest, onResponse } from './awsMiddleware.js'
+import { logToAwsOnRequest, logToAwsOnResponse } from './awsMiddleware.js'
 
 const app = express()
 const port = process.env.APP_PORT || 3000
 
 app.use(express.json())
-app.use(onRequest)
-app.use(onResponse)
+
+const useAWS: boolean = process.env.USE_AWS === 'true'
+if (useAWS) {
+  app.use(logToAwsOnRequest)
+  app.use(logToAwsOnResponse)
+}
+
 app.use('/bands', bandRoute)
 app.use('/albums', albumRoute)
 
