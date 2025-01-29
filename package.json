@@ -15,8 +15,7 @@
     "migrate:status": "prisma migrate status --schema ./Code/prisma/schema.prisma",
     "postinstall": "prisma generate --schema ./Code/prisma/schema.prisma",
     "prepare": "husky",
-    "start": "bun run ./Code/src/index.ts",
-    "vercel-build": "bun run postinstall && bun run migrate:deploy"
+    "start": "bun run ./Code/src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "6.2.1",
