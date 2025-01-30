@@ -37,3 +37,8 @@ Wer noch komplexere Rollout-Szenarien benötigt, kann zum Beispiel Blue-Green- o
 In unserer aktuellen Umgebung ist jedoch das eingebaute Rollback ausreichend, um Produktivbetriebsprobleme schnell zu beheben.
 
 ![Vercel Instant Rollback](./assets/img/Vercel%20Instant%20Rollback.png)
+
+### Monitoring
+
+Die Pipeline enthält auch ein umfangreiches Monitoring- und Logging-System, das uns hilft, die Performance und Stabilität unserer Anwendung kontinuierlich zu überwachen und bei Bedarf schnell reagieren zu können.
+
