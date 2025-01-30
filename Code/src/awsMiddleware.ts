@@ -1,23 +1,16 @@
+import AWS from 'aws-sdk'
 import { type Request, type Response } from 'express'
 
-import AWS from 'aws-sdk'
+const logGroupName = process.env.AWS_LOG_GROUP_NAME || ''
+const logStreamName = process.env.AWS_LOG_STREAM_NAME || ''
 
-// from https://colinchjs.github.io
-// Configure AWS credentials and region
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   region: process.env.AWS_REGION,
 })
-console.log('Updated aws config')
 
-// Create a CloudWatch Logs client
 const cloudWatchLogs = new AWS.CloudWatchLogs()
-
-// Define the log group and stream names
-const logGroupName = process.env.AWS_LOG_GROUP_NAME || ''
-
-const logStreamName = process.env.AWS_LOG_STREAM_NAME || ''
 
 const logMessage = (message: string) => {
   const params = {
