@@ -51,3 +51,13 @@ Ein Problem war die Anordnung der Middlewares. Da Expressjs die Middlewares in d
 
 Die fertigen Logs im backend sehen wiefolgt aus:
 ![LogGroup](/assets/img/aws-logs.png)
+
+# Database Monitoring
+
+Unsere Datenbank ist bei AWS gehostet. So können wir uns bei Cloudwatch diverse Metriken anschauen.
+Erstellt man ein Dashboard für RDS fügt aws direkt mehrere Metriken hinzu.
+![LogGroup](/assets/img/cloudwatch-rds.png)
+
+Erstellt man das Dashoard, können eigene Metric Widgets hinzugefügt werden. Dies haben wir für die BinLogDiskUsage gemacht. Es gibt sämtliche andere Metriken, die hinzugefügt werden können.
+
+![LogGroup](/assets/img/cloudwatch-dash-new-diagram.png)
