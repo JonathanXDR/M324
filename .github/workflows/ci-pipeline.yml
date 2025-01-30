@@ -1,0 +1,99 @@
+name: Versioning and Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  versioning_release:
+    name: Versioning and Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Get Last Release Tag
+        id: prev_tag
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
+          echo "PREV_TAG=$PREV_TAG" >> $GITHUB_ENV
+
+      - name: Extract Version from Merged Release Branch
+        id: extract_version
+        run: |
+          MERGED_BRANCH=$(git log --merges --oneline -n 1 | grep -oP "Merge branch 'release/\K[0-9]+\.[0-9]+\.[0-9]+")
+
+          if [[ -z "$MERGED_BRANCH" ]]; then
+            echo "Error: No release branch detected in merge commit!"
+            exit 1
+          fi
+
+          echo "NEW_VERSION=$MERGED_BRANCH" >> $GITHUB_ENV
+
+      - name: Check if Tag Already Exists
+        id: check_tag
+        run: |
+          TAG_EXISTS=$(git ls-remote --tags origin refs/tags/v${{ env.NEW_VERSION }} | wc -l)
+          echo "TAG_EXISTS=$TAG_EXISTS" >> $GITHUB_ENV
+
+      - name: Generate Structured Release Notes (Since Last Release)
+        if: env.TAG_EXISTS == '0'
+        run: |
+          PREV_TAG=${{ env.PREV_TAG }}
+          if [[ -z "$PREV_TAG" || "$PREV_TAG" == "0.0.0" ]]; then
+            PREV_TAG=$(git rev-list --max-parents=0 HEAD) # First commit if no previous tag
+          fi
+
+          FEATS=$(git log "$PREV_TAG"..HEAD --pretty=format:"- %s (%h)" --grep "^feat" || echo "")
+          FIXES=$(git log "$PREV_TAG"..HEAD --pretty=format:"- %s (%h)" --grep "^fix" || echo "")
+          BREAKS=$(git log "$PREV_TAG"..HEAD --pretty=format:"- %s (%h)" --grep "BREAKING CHANGE" || echo "")
+
+          echo "## Changes in this Release" > release-notes.md
+          if [[ -n "$BREAKS" ]]; then
+            echo "### ⚠️ Breaking Changes" >> release-notes.md
+            echo "$BREAKS" >> release-notes.md
+            echo "" >> release-notes.md
+          fi
+          if [[ -n "$FEATS" ]]; then
+            echo "### ✨ Features" >> release-notes.md
+            echo "$FEATS" >> release-notes.md
+            echo "" >> release-notes.md
+          fi
+          if [[ -n "$FIXES" ]]; then
+            echo "### 🛠️ Fixes" >> release-notes.md
+            echo "$FIXES" >> release-notes.md
+            echo "" >> release-notes.md
+          fi
+        shell: bash
+
+      - name: Create Git Tag
+        if: env.TAG_EXISTS == '0'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a v${{ env.NEW_VERSION }} -m "Version v${{ env.NEW_VERSION }}"
+          git push origin v${{ env.NEW_VERSION }}
+
+      - name: Create GitHub Release
+        if: env.TAG_EXISTS == '0'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ env.NEW_VERSION }}
+          name: Release v${{ env.NEW_VERSION }}
+          body_path: release-notes.md
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
