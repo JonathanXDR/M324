@@ -1,3 +1,5 @@
+# Datenbank Schema
+
 ![Music Database ERD](./assets/img/Music%20Database%20ERD.png)
 
 - ID (Automatically Generated)
