@@ -195,9 +195,11 @@ describe('Albums Route (Unit Tests)', () => {
       vi.spyOn(prisma.label, 'findFirst').mockResolvedValueOnce({
         id: 7,
         name: 'Test Label',
-      } as any)
+      } as Label)
 
-      vi.spyOn(prisma.album, 'create').mockRejectedValueOnce(new Error('Create error'))
+      vi.spyOn(prisma.album, 'create').mockRejectedValueOnce(
+        new Error('Create error')
+      )
 
       const app = createTestApp()
       const payload = {
