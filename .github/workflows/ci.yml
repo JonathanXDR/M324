@@ -107,6 +107,7 @@ jobs:
             echo "$FIXES" >> release-notes.md
             echo "" >> release-notes.md
           fi
+        shell: bash
 
       - name: Create Git Tag
         if: env.TAG_EXISTS == '0'
