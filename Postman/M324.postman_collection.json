@@ -1,72 +1,64 @@
 {
-	"info": {
-		"_postman_id": "aab2fc1c-8053-40d3-bead-8575f2800173",
-		"name": "M324",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "31943271"
-	},
-	"item": [
-		{
-			"name": "Create Album",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Test\",\r\n    \"releaseDate\": \"2012-12-12\",\r\n    \"band\": \"The Beatles\",\r\n    \"label\": \"Sony Music\",\r\n    \"price\": 1\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3001/albums",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3001",
-					"path": [
-						"albums"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Band",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Test\",\r\n    \"releaseDate\": \"2012-12-12\",\r\n    \"band\": \"The Beatles\",\r\n    \"label\": \"Sony Music\",\r\n    \"price\": 1\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3001/albums",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3001",
-					"path": [
-						"albums"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "aab2fc1c-8053-40d3-bead-8575f2800173",
+    "name": "M324",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31943271"
+  },
+  "item": [
+    {
+      "name": "Create Album",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Test\",\r\n    \"releaseDate\": \"2012-12-12\",\r\n    \"band\": \"The Beatles\",\r\n    \"label\": \"Sony Music\",\r\n    \"price\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/albums",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["albums"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Band",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Test\",\r\n    \"releaseDate\": \"2012-12-12\",\r\n    \"band\": \"The Beatles\",\r\n    \"label\": \"Sony Music\",\r\n    \"price\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/albums",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["albums"]
+        }
+      },
+      "response": []
+    }
+  ]
 }
