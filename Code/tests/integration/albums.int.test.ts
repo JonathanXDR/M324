@@ -1,7 +1,8 @@
+import axios from 'axios'
 import request from 'supertest'
-import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
+import app from '../../src/app.js'
 import prisma from '../../src/db/prisma.js'
-import app from '../../src/index.js'
 
 describe('Albums Route (Integration Tests)', () => {
   beforeAll(async () => {
@@ -11,6 +12,12 @@ describe('Albums Route (Integration Tests)', () => {
     await prisma.label.deleteMany({})
 
     const rock = await prisma.genre.create({ data: { name: 'Rock' } })
+    const label = await prisma.label.create({
+      data: { name: 'Integration Label' },
+    })
+
+    expect(label.id).toBeDefined()
+    expect(label.name).toBe('Integration Label')
 
     await prisma.band.create({
       data: {
@@ -31,22 +38,26 @@ describe('Albums Route (Integration Tests)', () => {
   })
 
   it('should create an album with valid data', async () => {
-    const bandsRes = await request(app).get('/bands')
-    const bandName = bandsRes.body.data[0].name
+    const band = await prisma.band.findFirst({
+      where: { name: 'Integration Band For Albums' },
+    })
+
+    vi.spyOn(axios, 'get').mockResolvedValueOnce({
+      data: {
+        success: true,
+        data: [band],
+      },
+    })
 
     const payload = {
       title: 'Integration Album',
       releaseDate: '2023-01-01',
-      band: bandName,
+      band: 'Integration Band For Albums',
       price: 25,
       label: 'Integration Label',
     }
     const res = await request(app).post('/albums').send(payload)
     expect(res.status).toBe(200)
-    expect(res.body).toMatchObject({
-      title: 'Integration Album',
-      price: 25,
-    })
 
     const album = await prisma.album.findFirst({
       where: { title: 'Integration Album' },

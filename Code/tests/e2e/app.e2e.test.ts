@@ -1,8 +1,8 @@
 import { Server } from 'http'
 import request from 'supertest'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import app from '../../src/app.js'
 import prisma from '../../src/db/prisma.js'
-import app from '../../src/index.js'
 
 let server: Server
 let baseURL: string
