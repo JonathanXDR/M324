@@ -99,8 +99,6 @@
   - Commit-Strategie eingehalten.
   - T5-Review verlief gut.
   - Produktives Arbeiten.
-- **Verbesserungen:**
-  - Scrum Master war abwesend; Diskussion über Wechsel des Scrum Masters.
 
 ---
 
