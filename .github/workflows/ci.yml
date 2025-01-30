@@ -26,13 +26,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Vitest Coverage
-        uses: davelosert/vitest-coverage-report-action@v2.8.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}          
-          vitest_command: npx vitest --coverage          
-          coverage_file_path: coverage/coverage-final.json
-          coverage_summary_file_path: coverage/coverage-summary.json
+      - name: Run unit tests
+        run: npm run test:unit
+        
+      - name: Run integration tests
+        run: npm run test:integration
+
+      - name: Run e2e tests
+        run: npm run test:e2e
   
   versioning_release:
     name: Versioning and Release
