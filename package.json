@@ -19,7 +19,7 @@
     "test": "vitest",
     "test:unit": "vitest run --config vitest.config.ts unit",
     "test:integration": "vitest run --config vitest.config.ts integration",
-    "test:system": "vitest run --config vitest.config.ts system",
+    "test:e2e": "vitest run --config vitest.config.ts e2e",
     "database:setup": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma"
   },
   "dependencies": {
