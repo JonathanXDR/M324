@@ -21,6 +21,7 @@ router.get('/', async (_req, res) => {
 
   if (!bands || bands.length === 0) {
     res.status(400).json({ success: false, data: 'Band is required' })
+    return
   }
 
   const modifiedBands = bands.map((band) => ({
@@ -43,6 +44,7 @@ router.get('/:id', async (_req, res) => {
     res
       .status(400)
       .json({ success: false, data: `Band with id ${id} not found` })
+    return
   }
 
   const modifiedBands = band.map((band) => ({
