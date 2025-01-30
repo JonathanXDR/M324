@@ -8,7 +8,7 @@ AWS.config.update({
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   region: process.env.AWS_REGION,
 })
-console.log('Updated aws config:')
+console.log('Updated aws config')
 
 // Create a CloudWatch Logs client
 const cloudWatchLogs = new AWS.CloudWatchLogs()
