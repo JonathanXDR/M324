@@ -1,9 +1,8 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ""
 labels: "bug"
-assignees: ""
+assignees: "KalelJong"
 ---
 
 **Describe the bug**
