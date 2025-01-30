@@ -2,6 +2,7 @@ import { type Request, type Response } from 'express'
 
 import AWS from 'aws-sdk'
 
+// from https://colinchjs.github.io
 // Configure AWS credentials and region
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
