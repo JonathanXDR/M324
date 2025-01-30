@@ -1,4 +1,4 @@
-# Logging und Monitoring
+# [Continuous Monitoring](https://gitlab.com/ch-tbz-it/Stud/m324/-/blob/main/Projekt/Z3_ContinuousMonitoring.md)
 
 ## Auswahl der Lösung
 
@@ -40,11 +40,13 @@ AWS_LOG_STREAM_NAME=M324-Logstream
 Danach habe ich den Code eingerichtet, der das Senden der Logs an AWS ermöglicht, und die Middleware konfiguriert.
 
 Eine Middleware verarbeitet die Requests:
+
 ![LogGroup](./assets/img/request-code.png)
 
 Eine weitere Middleware verarbeitet die Responses:
 
 ![LogGroup](./assets/img/response-code.png)
+
 Die Funktion `logMessage()` sendet die Logs an den Log Stream. Die Logik dazu kann in der Datei `awsMiddleware.ts` nachgelesen werden.
 
 Ein Problem war die Anordnung der Middlewares. Da Expressjs die Middlewares in der Reihenfolge aufruft, wie sie hinzugefügt werden ist die Anordnung wichtig. So wie im Bild hat es dann schlussendlich funktioniert. Bei einer Request muss zuerst die express.json() Funktion aufgerufen werden. Erst dann kann ich mit meiner eigenen Middleware den Body auslesen. Dann kommen meine Middlewares und zum Schluss die Routes bzw. die Endpunkte.

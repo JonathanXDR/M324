@@ -1,4 +1,4 @@
-# CI-Pipeline
+# [Continuous Integration](https://gitlab.com/ch-tbz-it/Stud/m324/-/blob/main/Projekt/P3_Praxis_CI.md)
 
 ## Versioning and Release Pipeline
 
