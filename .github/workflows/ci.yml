@@ -60,14 +60,16 @@ jobs:
       - name: Extract Version from Merged Release Branch
         id: extract_version
         run: |
-          MERGED_BRANCH=$(git log --merges --oneline -n 1 | grep -oP "Merge branch 'release/\K[0-9]+\.[0-9]+\.[0-9]+")
+          MERGE_COMMIT_MSG=$(git log --merges --oneline -n 1)
 
-          if [[ -z "$MERGED_BRANCH" ]]; then
-            echo "Error: No release branch detected in merge commit!"
+          NEW_VERSION=$(echo "$MERGE_COMMIT_MSG" | grep -oP 'release/\K[0-9]+\.[0-9]+\.[0-9]+')
+
+          if [[ -z "$NEW_VERSION" ]]; then
+            echo "Error: Could not extract version from merge commit message!"
             exit 1
           fi
 
-          echo "NEW_VERSION=$MERGED_BRANCH" >> $GITHUB_ENV
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
 
       - name: Check if Tag Already Exists
         id: check_tag

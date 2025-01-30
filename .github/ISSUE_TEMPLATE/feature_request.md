@@ -3,7 +3,6 @@ name: Feature request
 about: Suggest an idea for this project
 labels: "enhancement"
 assignees: "KalelJong"
-projects: "M324"
 ---
 
 **Is your feature request related to a problem? Please describe.**
