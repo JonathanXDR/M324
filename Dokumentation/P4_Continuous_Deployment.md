@@ -41,4 +41,3 @@ In unserer aktuellen Umgebung ist jedoch das eingebaute Rollback ausreichend, um
 ### Monitoring
 
 Die Pipeline enthält auch ein umfangreiches Monitoring- und Logging-System, das uns hilft, die Performance und Stabilität unserer Anwendung kontinuierlich zu überwachen und bei Bedarf schnell reagieren zu können.
-

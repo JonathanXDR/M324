@@ -6,6 +6,8 @@
 
 Unsere Branching Strategie soll sicherstellen, dass wir strukturiert entwickeln, sauberen Code in den `main` branch integrieren, und eindeutig nachvollziehen können, wann und wie neue Features oder Bugfixes in unsere Applikation eingeflossen sind. Ausserdem soll sie flexibel genug sein, um zukünftige Anforderungen (wie z. B. Code Review, CI/CD) zu erfüllen.
 
+Dokumentationen und Administratives müssen nicht diese Regel befolgen.
+
 ### Überblick der Branches
 
 **Branch-Typen:**

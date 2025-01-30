@@ -24,29 +24,12 @@ Bevor der eigentliche Versioning- und Release-Prozess stattfindet, werden im CI-
 **Test-Job (Ablauf):**
 
 1. **Repository auschecken**
-
-   - Benutzt `actions/checkout@v4`.
-
 2. **Node.js einrichten**
-
-   - Verwendet `actions/setup-node@v4` mit `node-version: 22`.
-
 3. **Abhängigkeiten installieren**
-
-   - Führt `bun install` aus, um alle benötigten Pakete zu installieren.
-
 4. **Unit Tests ausführen**
-
-   - Führt `bun run test:unit` aus. Hier werden einzelne Komponenten oder Module isoliert getestet.
-
 5. **Integration Tests ausführen**
-
-   - Führt `bun run test:integration` aus. Hierbei wird das Zusammenspiel mehrerer Komponenten geprüft.
-
 6. **End-to-End (E2E) Tests ausführen**
-   - Führt `bun run test:e2e` aus. Dabei wird das Gesamtsystem aus Anwenderperspektive getestet (z. B. via HTTP-Anfragen an einen lokal gestarteten Server).
-
-**Vorteile von Vitest:**
+   **Vorteile von Vitest:**
 
 - Schnelle Ausführung der Tests (hot-reloading, parallele Ausführung).
 - Einfache Konfiguration und Integration in bestehende Node.js-Projekte.
@@ -75,12 +58,3 @@ Bevor der eigentliche Versioning- und Release-Prozess stattfindet, werden im CI-
 - **Strukturierte Release Notes:** Änderungen (Features, Fixes, Breaking Changes) werden automatisch erfasst und in Markdown übersichtlich dargestellt.
 - **Direkte Veröffentlichung auf GitHub:** Neues Release und entsprechendes Tag stehen sofort zur Verfügung.
 - **Sichere Codebasis durch Tests mit Vitest:** Potenzielle Fehler werden frühzeitig erkannt, was eine höhere Code-Qualität gewährleistet.
-
-### Fehlerbehandlung
-
-Falls der Workflow fehlschlägt:
-
-- **Version nicht extrahierbar** → Stelle sicher, dass der Merge-Commit die Versionsnummer im Format `release/x.y.z` enthält.
-- **Tag existiert bereits** → Der Prozess wird übersprungen und kein neues Release angelegt.
-- **Fehlende Berechtigungen** → Prüfe Repository-Einstellungen und Token.
-- **Fehlgeschlagene Tests** → Die Pipeline wird abgebrochen; behebe Fehler in den Tests, bevor du erneut pushst.

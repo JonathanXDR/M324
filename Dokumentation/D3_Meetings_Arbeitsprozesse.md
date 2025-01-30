@@ -18,11 +18,11 @@ Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert w
 
 #### Rollenübersicht
 
-| Rolle             | Beschreibung                                                                                                                                                                                                          | Name                                                |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| **Scrum Master**  | Verantwortlich für die Implementierung und Einhaltung des Scrum-Prozesses. Unterstützt das Team dabei, effektiv zu arbeiten, beseitigt Hindernisse und stellt sicher, dass Scrum-Praktiken korrekt angewendet werden. | Zakria Samma                                        |
-| **Product Owner** | Vertritt die Interessen der Stakeholder und Endbenutzer. Verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um wertvolle Ergebnisse sicherzustellen.                    | Jonathan Russ                                       |
-| **Stakeholder**   | Liefert Anforderungen, Feedback und wichtige Entscheidungen.                                                                                                                                                          | Thanam Pangri                                       |
+| Rolle             | Beschreibung                                                                                                                                                                                                          | Name                                                              |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Scrum Master**  | Verantwortlich für die Implementierung und Einhaltung des Scrum-Prozesses. Unterstützt das Team dabei, effektiv zu arbeiten, beseitigt Hindernisse und stellt sicher, dass Scrum-Praktiken korrekt angewendet werden. | Zakria Samma                                                      |
+| **Product Owner** | Vertritt die Interessen der Stakeholder und Endbenutzer. Verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um wertvolle Ergebnisse sicherzustellen.                    | Jonathan Russ                                                     |
+| **Stakeholder**   | Liefert Anforderungen, Feedback und wichtige Entscheidungen.                                                                                                                                                          | Thanam Pangri                                                     |
 | **Developer**     | Teammitglieder, die Anforderungen umsetzen, testen und funktionierende Produktinkremente gemäss den Vorgaben des Product Owners liefern.                                                                              | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong, Zakria Samma |
 
 ### Meetings
@@ -145,7 +145,11 @@ Die Verwaltung unseres Datenbankschemas erfolgt über [Prisma Migrations](https:
 
 ### Backup-Strategie
 
-In der Produktivumgebung nutzen wir die automatisierten Backup-Funktionen von [Amazon RDS](https://aws.amazon.com/de/rds/), um regelmässige Sicherungen unserer Datenbank zu erstellen. In der lokalen Entwicklungsumgebung werden die Daten über [Docker-Volumes](https://docs.docker.com/engine/storage/volumes/) persistent gespeichert, wodurch sie auch nach einem Neustart des Containers erhalten bleiben.
+In der Produktivumgebung nutzen wir die automatisierten Backup-Funktionen von [Amazon RDS](https://aws.amazon.com/de/rds/), um regelmässige Sicherungen unserer Datenbank zu erstellen.
+
+### Entwicklungsumgebung
+
+Auf dem AWS Server befinden sich zwei Datenbanken; eine für PROD und eine für DEV.
 
 ## API-Standards und Dokumentation
 

@@ -115,3 +115,20 @@
   - Produktives Arbeiten.
 - **Verbesserungen:**
   - D3 Meeting Doku nicht komplett, fehlende Inhalte ergänzen.
+
+---
+
+# 30.01.2025
+
+**Spezielles vor Meeting**
+(Unter der Woche wurde am Projekt gearbeitet und der neue Stand wurde in einem speziellen Meeting besprochen)
+
+- P2 wurde fertiggestellt
+- P3 und P4 müssen noch fertiggestellt werden
+- Z3 wurde fertiggestellt
+- Z1 und Z2 müssen noch fertiggestellt werden
+
+**Daily Meeting:**
+
+- Dokumentation fertigstellen
+- Zusatz aufgaben fertigstellen
