@@ -1,45 +1,68 @@
-import { Server } from 'http'
 import request from 'supertest'
-import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest'
 import prisma from '../../src/db/prisma.js'
 import app from '../../src/index.js'
 
-let server: Server
-
-describe('Bands Integration Tests', () => {
+describe('Bands Route (Integration Tests)', () => {
   beforeAll(async () => {
-    server = app.listen()
+    await prisma.album.deleteMany({})
+    await prisma.band.deleteMany({})
+    await prisma.genre.deleteMany({})
+    await prisma.label.deleteMany({})
+
+    const rock = await prisma.genre.create({ data: { name: 'Rock' } })
+
+    await prisma.label.create({ data: { name: 'Test Label' } })
+
+    await prisma.band.create({
+      data: {
+        name: 'Integration Band',
+        foundingDate: new Date('2000-01-01'),
+        members: 4,
+        genreId: rock.id,
+      },
+    })
   })
 
   afterAll(async () => {
-    server.close()
+    await prisma.album.deleteMany({})
+    await prisma.band.deleteMany({})
+    await prisma.genre.deleteMany({})
+    await prisma.label.deleteMany({})
+    await prisma.$disconnect()
   })
 
-  it('GET /bands should return an array of bands', async () => {
-    const res = await request(server).get('/bands')
+  beforeEach(async () => {})
+
+  it('GET /bands should return existing bands', async () => {
+    const res = await request(app).get('/bands')
     expect(res.status).toBe(200)
     expect(res.body.success).toBe(true)
-    expect(Array.isArray(res.body.data)).toBe(true)
+    expect(res.body.data.length).toBeGreaterThan(0)
+
+    const names = res.body.data.map((b: any) => b.name)
+    expect(names).toContain('Integration Band')
   })
 
-  it('POST /bands should insert a band with associated albums', async () => {
-    const data = {
-      name: 'Integration Test Band',
-      foundingDate: '2025-01-01',
-      members: 3,
-      dissolutionDate: null,
-      genreId: 1,
-      albums: [{ title: 'Integration Album', price: 100, labelId: 1 }],
+  it('POST /bands should create a new band', async () => {
+    const [someGenre] = await prisma.genre.findMany({})
+    const payload = {
+      name: 'Another Integration Band',
+      foundingDate: '2010-01-01',
+      members: 5,
+      genreId: someGenre.id,
+      albums: [],
     }
-    const res = await request(server).post('/bands').send(data)
+
+    const res = await request(app).post('/bands').send(payload)
     expect(res.status).toBe(200)
+    expect(res.body.success).toBe(true)
+    expect(res.body.data.name).toBe('Another Integration Band')
 
-    expect(res.body).toMatchObject({
-      name: 'Integration Test Band',
-      albums: expect.any(Array),
+    const found = await prisma.band.findFirst({
+      where: { name: 'Another Integration Band' },
     })
-
-    const bandId = res.body.id
-    await prisma.band.delete({ where: { id: bandId } })
+    expect(found).not.toBeNull()
+    expect(found?.members).toBe(5)
   })
 })
