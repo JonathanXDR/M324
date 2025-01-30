@@ -44,6 +44,7 @@ router.get('/:id', async (_req, res) => {
     res
       .status(400)
       .json({ success: false, data: `Band with id ${id} not found` })
+    return
   }
 
   const modifiedBands = band.map((band) => ({
