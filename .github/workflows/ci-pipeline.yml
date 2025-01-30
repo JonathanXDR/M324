@@ -33,9 +33,29 @@ jobs:
       - name: Extract Version from Merged Release Branch
         id: extract_version
         run: |
-          FULL_BRANCH_NAME=$(jq -r '.pull_request.head.ref' "$GITHUB_EVENT_PATH")
-          NEW_VERSION=$(echo "$FULL_BRANCH_NAME" | grep -oP '[0-9]+\.[0-9]+\.[0-9]+')
-          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+          git fetch --all --prune
+
+          MERGE_COMMIT=$(git log --merges --oneline -n 1 --pretty=format:'%H')
+
+          if [[ -z "$MERGE_COMMIT" ]]; then
+            echo "Error: No recent merge commit found!"
+            exit 1
+          fi
+
+          PARENTS=$(git log -n 1 --pretty=format:'%P' "$MERGE_COMMIT")
+
+          for PARENT in $PARENTS; do
+            BRANCH_NAME=$(git branch -r --contains "$PARENT" | grep -o 'origin/release/[0-9]\+\.[0-9]\+\.[0-9]\+')
+
+            if [[ -n "$BRANCH_NAME" ]]; then
+              RELEASE_VERSION=$(echo "$BRANCH_NAME" | cut -d'/' -f3)  # Extract x.y.z
+              echo "NEW_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
+              exit 0
+            fi
+          done
+
+          echo "Error: No release branch detected in merge commit!"
+          exit 1
 
       - name: Check if Tag Already Exists
         id: check_tag
