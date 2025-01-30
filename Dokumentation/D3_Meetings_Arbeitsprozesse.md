@@ -145,7 +145,11 @@ Die Verwaltung unseres Datenbankschemas erfolgt über [Prisma Migrations](https:
 
 ### Backup-Strategie
 
-In der Produktivumgebung nutzen wir die automatisierten Backup-Funktionen von [Amazon RDS](https://aws.amazon.com/de/rds/), um regelmässige Sicherungen unserer Datenbank zu erstellen. In der lokalen Entwicklungsumgebung werden die Daten über [Docker-Volumes](https://docs.docker.com/engine/storage/volumes/) persistent gespeichert, wodurch sie auch nach einem Neustart des Containers erhalten bleiben.
+In der Produktivumgebung nutzen wir die automatisierten Backup-Funktionen von [Amazon RDS](https://aws.amazon.com/de/rds/), um regelmässige Sicherungen unserer Datenbank zu erstellen.
+
+### Entwicklungsumgebung
+
+Auf dem AWS Server befinden sich zwei Datenbanken; eine für PROD und eine für DEV.
 
 ## API-Standards und Dokumentation
 
