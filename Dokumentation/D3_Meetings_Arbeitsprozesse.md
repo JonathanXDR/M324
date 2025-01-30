@@ -14,7 +14,7 @@ In unserem Projektteam haben wir verschiedene Scrum-Rollen definiert, die jeweil
 
 Jonathan Russ übernimmt die Rolle des Product Owners. In dieser Position vertritt er die Interessen der Stakeholder und Endnutzer. Er ist verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um sicherzustellen, dass wertvolle Ergebnisse erzielt werden.
 
-Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert wesentliche Anforderungen, Feedback und Entscheidungen für das Projekt. Das Entwicklungsteam besteht aus Jonathan Russ, Pascal Rieder, Jon Landa und Kalel Jong. Sie setzen die Anforderungen um, führen Tests durch und liefern funktionale Produktinkremente gemäss den Vorgaben des Product Owners.
+Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert wesentliche Anforderungen, Feedback und Entscheidungen für das Projekt. Das Entwicklungsteam besteht aus Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong und Zakria Samma. Sie setzen die Anforderungen um, führen Tests durch und liefern funktionale Produktinkremente gemäss den Vorgaben des Product Owners.
 
 #### Rollenübersicht
 
@@ -23,7 +23,7 @@ Als wichtiger Stakeholder bringt Thanam Pangri seine Expertise ein und liefert w
 | **Scrum Master**  | Verantwortlich für die Implementierung und Einhaltung des Scrum-Prozesses. Unterstützt das Team dabei, effektiv zu arbeiten, beseitigt Hindernisse und stellt sicher, dass Scrum-Praktiken korrekt angewendet werden. | Zakria Samma                                        |
 | **Product Owner** | Vertritt die Interessen der Stakeholder und Endbenutzer. Verantwortlich für die Definition und Priorisierung der Produktanforderungen im Product Backlog, um wertvolle Ergebnisse sicherzustellen.                    | Jonathan Russ                                       |
 | **Stakeholder**   | Liefert Anforderungen, Feedback und wichtige Entscheidungen.                                                                                                                                                          | Thanam Pangri                                       |
-| **Developer**     | Teammitglieder, die Anforderungen umsetzen, testen und funktionierende Produktinkremente gemäss den Vorgaben des Product Owners liefern.                                                                              | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong |
+| **Developer**     | Teammitglieder, die Anforderungen umsetzen, testen und funktionierende Produktinkremente gemäss den Vorgaben des Product Owners liefern.                                                                              | Jonathan Russ, Pascal Rieder, Jon Landa, Kalel Jong, Zakria Samma |
 
 ### Meetings
 
