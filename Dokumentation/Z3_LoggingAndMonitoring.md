@@ -10,7 +10,7 @@ Wir haben versucht, AWS CloudWatch im von der Lehrperson eingerichteten Learner 
 
 ![LogGroup](/assets/img/LogGroup.png)
 
-Dazu haben wir ein Log-Stream erstellt, an den die Applikation dann die Logs sendet.
+Dazu haben wir einen Log-Stream erstellt, an den die Applikation dann die Logs sendet.
 
 ![LogGroup](/assets/img/log-stream.png)
 
@@ -47,7 +47,7 @@ Eine weitere Middleware verarbeitet die Responses:
 ![LogGroup](/assets/img/response-code.png)
 Die Funktion `logMessage()` sendet die Logs an den Log Stream. Die Logik dazu kann in der Datei `awsMiddleware.ts` nachgelesen werden.
 
-Ein Problem war die Anordnung der Middlewares. Da Expressjs die Middlewares in der Reihenfolge aufruft, wie sie hinzugefügt werden ist die Anordnung wichtig. So wie im Bild hat es dann schlussendlich funktioniert. Bei einer Request muss zuerst die express.json() funktion aufgerufen werden. Erst dann kann ich mit meiner eigenen Middleware den Body auslesen. Dann kommen meine Middlewares und zum Schluss die Routes bzw die Endpunkte.
+Ein Problem war die Anordnung der Middlewares. Da Expressjs die Middlewares in der Reihenfolge aufruft, wie sie hinzugefügt werden ist die Anordnung wichtig. So wie im Bild hat es dann schlussendlich funktioniert. Bei einer Request muss zuerst die express.json() Funktion aufgerufen werden. Erst dann kann ich mit meiner eigenen Middleware den Body auslesen. Dann kommen meine Middlewares und zum Schluss die Routes bzw. die Endpunkte.
 
 ![LogGroup](/assets/img/middleware-anordnung.png)
 
