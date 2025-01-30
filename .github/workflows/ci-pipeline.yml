@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   versioning_release:
     name: Versioning and Release
@@ -27,18 +30,17 @@ jobs:
           PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
           echo "PREV_TAG=$PREV_TAG" >> $GITHUB_ENV
 
-      - name: Determine Version from Release Branch Merge
-        id: determine_version
+      - name: Extract Version from Merged Release Branch
+        id: extract_version
         run: |
-          MERGE_COMMIT_MSG=$(git log -1 --pretty=%B)
-          RELEASE_VERSION=$(echo "$MERGE_COMMIT_MSG" | grep -oP 'release/\K[0-9]+\.[0-9]+\.[0-9]+')
+          MERGED_BRANCH=$(git log --merges --oneline -n 1 | grep -oP "Merge branch 'release/\K[0-9]+\.[0-9]+\.[0-9]+")
 
-          if [[ -z "$RELEASE_VERSION" ]]; then
-            echo "Error: No release version detected in merge commit message!"
+          if [[ -z "$MERGED_BRANCH" ]]; then
+            echo "Error: No release branch detected in merge commit!"
             exit 1
           fi
 
-          echo "NEW_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
+          echo "NEW_VERSION=$MERGED_BRANCH" >> $GITHUB_ENV
 
       - name: Check if Tag Already Exists
         id: check_tag
