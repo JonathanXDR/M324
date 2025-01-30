@@ -141,7 +141,9 @@ describe('Bands Route (Unit Tests)', () => {
     })
 
     it('should catch server errors and return 500', async () => {
-      vi.spyOn(prisma.band, 'create').mockRejectedValueOnce(new Error('DB Error'))
+      vi.spyOn(prisma.band, 'create').mockRejectedValueOnce(
+        new Error('DB Error')
+      )
 
       const app = createTestApp()
       const payload = {
