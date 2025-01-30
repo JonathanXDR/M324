@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "check:types": "tsc --noEmit",
+    "coverage": "vitest run --coverage",
     "dev": "bun --hot run ./Code/src/index.ts",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
@@ -15,7 +16,12 @@
     "migrate:status": "prisma migrate status --schema ./Code/prisma/schema.prisma",
     "postinstall": "prisma generate --schema ./Code/prisma/schema.prisma",
     "prepare": "husky",
-    "start": "bun run ./Code/src/index.ts"
+    "start": "bun run ./Code/src/index.ts",
+    "test": "vitest",
+    "test:unit": "vitest run --config vitest.config.ts unit",
+    "test:integration": "vitest run --config vitest.config.ts integration",
+    "test:e2e": "vitest run --config vitest.config.ts e2e",
+    "database:setup": "prisma migrate reset --force --schema ./Code/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "6.3.0",
@@ -29,13 +35,18 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.19.0",
     "@types/bun": "1.2.1",
+    "@types/node": "^22.12.0",
+    "@types/supertest": "^6.0.2",
+    "@vitest/coverage-v8": "^3.0.4",
     "eslint": "^9.19.0",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "neostandard": "^0.12.0",
     "prettier": "^3.4.2",
-    "prisma": "6.3.0"
+    "prisma": "6.3.0",
+    "supertest": "^7.0.0",
+    "vitest": "^3.0.4"
   },
   "peerDependencies": {
     "typescript": "^5.7.3"
