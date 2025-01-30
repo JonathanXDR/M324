@@ -6,6 +6,16 @@ const app = express()
 const port = process.env.APP_PORT || 3000
 
 app.use(express.json())
+
+const useAWS: boolean = process.env.USE_AWS === 'true'
+if (useAWS) {
+  const { logToAwsOnRequest, logToAwsOnResponse } = await import(
+    './awsMiddleware.js'
+  )
+  app.use(logToAwsOnRequest)
+  app.use(logToAwsOnResponse)
+}
+
 app.use('/bands', bandRoute)
 app.use('/albums', albumRoute)
 
