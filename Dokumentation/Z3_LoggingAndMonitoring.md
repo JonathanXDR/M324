@@ -2,11 +2,12 @@
 
 ## Auswahl der Lösung
 
-Wir hatten Lust das Logging mit einem eigenen Backend und einem kleinen Dashboard selbst umzusetzen. Doch die Lehrperson wollte, dass wir eine bereits bestehende Lösung verwenden. Sie hat uns die out of the box Lösung von AWS verwiesen. Für dies haben wir uns dann auch entschieden, da unsere Datenbank bereits bei AWS gehostet ist.
+Wir hatten die Idee, das Logging mit einem eigenen Backend und einem kleinen Dashboard selbst umzusetzen. Doch die Lehrperson wollte, dass wir eine bereits bestehende Lösung verwenden. Sie verwies uns auf die "Out-of-the-Box"-Lösung von AWS. Dafür haben wir uns dann auch entschieden, da unsere Datenbank bereits bei AWS gehostet ist.
 
 ## AWS Academy Learner Lab
 
-Wir haben versucht, Aws Cloudwatch auf dem von der Lehrperson eingerichteten Learner Lab umzusetzen. Dazu haben wir uns zusammen getroffen und versucht es in unsere App einzubauen. Dazu haben wir eine Log Group mit dem Namen «M324-LogGroup» erstellt.
+Wir haben versucht, AWS CloudWatch im von der Lehrperson eingerichteten Learner Lab zu nutzen. Dazu haben wir uns zusammengesetzt und versucht, es in unsere App zu integrieren. Wir haben eine Log Group mit dem Namen "M324-LogGroup" erstellt.
+
 ![LogGroup](/assets/img/LogGroup.png)
 
 Dazu haben wir ein Log-Stream erstellt, an den die Applikation dann die Logs sendet.
@@ -17,15 +18,16 @@ Stand Dienstagabend konnten wir noch keine Logs speichern.
 
 ## Problem IAM User
 
-Damit unsere App die Daten an AWS senden kann, braucht sie die Credentials bzw einen Access-Key, um sich bei AWS zu Authentifizieren, von einem IAM-Benutzer. Doch wir haben nicht genug Berechtigungen, um diesen zu erstellen. Zum einen ist das Erstellen einer Permission Group nicht möglich als auch das erstellen des Users selbst.
+Damit unsere App die Daten an AWS senden kann, benötigt sie Zugangsdaten (Access Key), um sich bei AWS zu authentifizieren. Dafür wird ein IAM-Benutzer benötigt. Allerdings haben wir nicht die notwendigen Berechtigungen, um einen solchen Benutzer zu erstellen. Weder das Erstellen einer Berechtigungsgruppe noch das Anlegen des Benutzers selbst war möglich.
+
 ![LogGroup](/assets/img/error1.png)
 ![LogGroup](/assets/img/error2.png)
 
-Dies haben wir dann bei der Lehrperson gemeldet, doch sie konnte uns, auch aus Krankheitsgründen, nicht weiterhelfen. Eine Möglichkeit wie nun weitergefahren werden kann ist mit einem eigenen AWS-Account das Logging umzusetzen.
+Wir haben dieses Problem der Lehrperson gemeldet, aber aufgrund einer Erkrankung konnte sie uns nicht weiterhelfen. Eine alternative Möglichkeit bestand darin, das Logging mit einem eigenen AWS-Account umzusetzen.
 
 ## Lösung mit eigenem AWS Account
 
-Ich habe auf meinem Privaten AWS-Account den ganzen Prozess nochmals wiederholt. Dann habe ich die Umgebungsvariablen ins .env unserer App eingefügt.
+Ich habe den gesamten Prozess auf meinem privaten AWS-Account erneut durchgeführt und anschliessend die Umgebungsvariablen in die .env-Datei unserer App eingefügt.
 
 ```.env
 AWS_ACCESS_KEY_ID=
@@ -35,29 +37,30 @@ AWS_LOG_GROUP_NAME=M324-Loggroup
 AWS_LOG_STREAM_NAME=M324-Logstream
 ```
 
-Danach habe ich den Code eingerichtet, der es ermöglicht, die logs an AWS zu senden. Danach wurden die Middlewares eingerichtet.
+Danach habe ich den Code eingerichtet, der das Senden der Logs an AWS ermöglicht, und die Middleware konfiguriert.
 
-Einmal für die Request
+Eine Middleware verarbeitet die Requests:
 ![LogGroup](/assets/img/request-code.png)
 
-Und einmal für die Response:
+Eine weitere Middleware verarbeitet die Responses:
 
 ![LogGroup](/assets/img/response-code.png)
-Die Funktion logMessage sendet den String an den log stream. Die Logik kann im awsMiddleware.ts file nachgelsen werden.
+Die Funktion `logMessage()` sendet die Logs an den Log Stream. Die Logik dazu kann in der Datei `awsMiddleware.ts` nachgelesen werden.
 
-Ein Problem war die Anordnung der Middlewares. Da Expressjs die Middlewares in der Reihenfolge aufruft, wie sie hinzugefügt werden ist die Anordnung wichtig. So wie im Bild hat es dann schlussendlich funktioniert. Bei einer Request muss zuerst muss die express.json() funktion aufgerufen werden. Erst dann kann ich mit meiner eigenen Middleware den Body auslesen. Dann kommen meine Middlewares und zum Schluss die Routes bzw die Endpunkte.
+Ein Problem war die Anordnung der Middlewares. Da Expressjs die Middlewares in der Reihenfolge aufruft, wie sie hinzugefügt werden ist die Anordnung wichtig. So wie im Bild hat es dann schlussendlich funktioniert. Bei einer Request muss zuerst die express.json() funktion aufgerufen werden. Erst dann kann ich mit meiner eigenen Middleware den Body auslesen. Dann kommen meine Middlewares und zum Schluss die Routes bzw die Endpunkte.
 
 ![LogGroup](/assets/img/middleware-anordnung.png)
 
-Die fertigen Logs im backend sehen wiefolgt aus:
+Die fertigen Logs im Backend sehen wie folgt aus:
 ![LogGroup](/assets/img/aws-logs.png)
 
 # Database Monitoring
 
-Unsere Datenbank ist bei AWS gehostet. So können wir uns bei Cloudwatch diverse Metriken anschauen.
-Erstellt man ein Dashboard für RDS fügt aws direkt mehrere Metriken hinzu.
+Unsere Datenbank ist bei AWS gehostet. Dadurch können wir uns in CloudWatch verschiedene Metriken anzeigen lassen.
+Beim Erstellen eines Dashboards für RDS fügt AWS automatisch mehrere Metriken hinzu.
+
 ![LogGroup](/assets/img/cloudwatch-rds.png)
 
-Erstellt man das Dashoard, können eigene Metric Widgets hinzugefügt werden. Dies haben wir für die BinLogDiskUsage gemacht. Es gibt sämtliche andere Metriken, die hinzugefügt werden können.
+Erstellt man das Dashoard, können eigene Metric-Widgets hinzugefügt werden. Dies haben wir für die `BinLogDiskUsage` gemacht. Es gibt zahlreiche weitere Metriken, die hinzugefügt werden können.
 
 ![LogGroup](/assets/img/cloudwatch-dash-new-diagram.png)
